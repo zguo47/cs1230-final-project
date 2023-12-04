@@ -1,0 +1,492 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: projects_realtime
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/
+# =============================================================================
+# Object build statements for EXECUTABLE target projects_realtime
+
+
+#############################################
+# Order-only phony target for projects_realtime
+
+build cmake_object_order_depends_target_projects_realtime: phony || .rcc/qrc_Resources.cpp cmake_object_order_depends_target_StaticGLEW projects_realtime_autogen projects_realtime_autogen/mocs_compilation.cpp projects_realtime_autogen/timestamp projects_realtime_autogen_timestamp_deps
+
+build CMakeFiles/projects_realtime.dir/projects_realtime_autogen/mocs_compilation.cpp.o: CXX_COMPILER__projects_realtime_Debug /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/projects_realtime_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_projects_realtime
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/projects_realtime.dir/projects_realtime_autogen/mocs_compilation.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -std=gnu++20
+  INCLUDES = -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug -I/Users/shania/cs1230/projects-realtime-zguo47 -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/projects_realtime_autogen/include -I/Users/shania/cs1230/projects-realtime-zguo47/src -I/Users/shania/cs1230/projects-realtime-zguo47/projects_realtime -I/Users/shania/cs1230/projects-realtime-zguo47/PRIVATE -I/Users/shania/cs1230/projects-realtime-zguo47/glew/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtCore.framework/Headers -iframework /Users/shania/Qt/6.5.2/macos/lib -isystem /Users/shania/Qt/6.5.2/macos/mkspecs/macx-clang -isystem /Users/shania/Qt/6.5.2/macos/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtGui.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGL.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGLWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/projects_realtime.dir
+  OBJECT_FILE_DIR = CMakeFiles/projects_realtime.dir/projects_realtime_autogen
+
+build CMakeFiles/projects_realtime.dir/src/main.cpp.o: CXX_COMPILER__projects_realtime_Debug /Users/shania/cs1230/projects-realtime-zguo47/src/main.cpp || cmake_object_order_depends_target_projects_realtime
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/projects_realtime.dir/src/main.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -std=gnu++20
+  INCLUDES = -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug -I/Users/shania/cs1230/projects-realtime-zguo47 -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/projects_realtime_autogen/include -I/Users/shania/cs1230/projects-realtime-zguo47/src -I/Users/shania/cs1230/projects-realtime-zguo47/projects_realtime -I/Users/shania/cs1230/projects-realtime-zguo47/PRIVATE -I/Users/shania/cs1230/projects-realtime-zguo47/glew/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtCore.framework/Headers -iframework /Users/shania/Qt/6.5.2/macos/lib -isystem /Users/shania/Qt/6.5.2/macos/mkspecs/macx-clang -isystem /Users/shania/Qt/6.5.2/macos/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtGui.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGL.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGLWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/projects_realtime.dir
+  OBJECT_FILE_DIR = CMakeFiles/projects_realtime.dir/src
+
+build CMakeFiles/projects_realtime.dir/src/realtime.cpp.o: CXX_COMPILER__projects_realtime_Debug /Users/shania/cs1230/projects-realtime-zguo47/src/realtime.cpp || cmake_object_order_depends_target_projects_realtime
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/projects_realtime.dir/src/realtime.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -std=gnu++20
+  INCLUDES = -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug -I/Users/shania/cs1230/projects-realtime-zguo47 -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/projects_realtime_autogen/include -I/Users/shania/cs1230/projects-realtime-zguo47/src -I/Users/shania/cs1230/projects-realtime-zguo47/projects_realtime -I/Users/shania/cs1230/projects-realtime-zguo47/PRIVATE -I/Users/shania/cs1230/projects-realtime-zguo47/glew/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtCore.framework/Headers -iframework /Users/shania/Qt/6.5.2/macos/lib -isystem /Users/shania/Qt/6.5.2/macos/mkspecs/macx-clang -isystem /Users/shania/Qt/6.5.2/macos/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtGui.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGL.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGLWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/projects_realtime.dir
+  OBJECT_FILE_DIR = CMakeFiles/projects_realtime.dir/src
+
+build CMakeFiles/projects_realtime.dir/src/mainwindow.cpp.o: CXX_COMPILER__projects_realtime_Debug /Users/shania/cs1230/projects-realtime-zguo47/src/mainwindow.cpp || cmake_object_order_depends_target_projects_realtime
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/projects_realtime.dir/src/mainwindow.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -std=gnu++20
+  INCLUDES = -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug -I/Users/shania/cs1230/projects-realtime-zguo47 -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/projects_realtime_autogen/include -I/Users/shania/cs1230/projects-realtime-zguo47/src -I/Users/shania/cs1230/projects-realtime-zguo47/projects_realtime -I/Users/shania/cs1230/projects-realtime-zguo47/PRIVATE -I/Users/shania/cs1230/projects-realtime-zguo47/glew/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtCore.framework/Headers -iframework /Users/shania/Qt/6.5.2/macos/lib -isystem /Users/shania/Qt/6.5.2/macos/mkspecs/macx-clang -isystem /Users/shania/Qt/6.5.2/macos/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtGui.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGL.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGLWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/projects_realtime.dir
+  OBJECT_FILE_DIR = CMakeFiles/projects_realtime.dir/src
+
+build CMakeFiles/projects_realtime.dir/src/settings.cpp.o: CXX_COMPILER__projects_realtime_Debug /Users/shania/cs1230/projects-realtime-zguo47/src/settings.cpp || cmake_object_order_depends_target_projects_realtime
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/projects_realtime.dir/src/settings.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -std=gnu++20
+  INCLUDES = -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug -I/Users/shania/cs1230/projects-realtime-zguo47 -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/projects_realtime_autogen/include -I/Users/shania/cs1230/projects-realtime-zguo47/src -I/Users/shania/cs1230/projects-realtime-zguo47/projects_realtime -I/Users/shania/cs1230/projects-realtime-zguo47/PRIVATE -I/Users/shania/cs1230/projects-realtime-zguo47/glew/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtCore.framework/Headers -iframework /Users/shania/Qt/6.5.2/macos/lib -isystem /Users/shania/Qt/6.5.2/macos/mkspecs/macx-clang -isystem /Users/shania/Qt/6.5.2/macos/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtGui.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGL.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGLWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/projects_realtime.dir
+  OBJECT_FILE_DIR = CMakeFiles/projects_realtime.dir/src
+
+build CMakeFiles/projects_realtime.dir/src/utils/scenefilereader.cpp.o: CXX_COMPILER__projects_realtime_Debug /Users/shania/cs1230/projects-realtime-zguo47/src/utils/scenefilereader.cpp || cmake_object_order_depends_target_projects_realtime
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/projects_realtime.dir/src/utils/scenefilereader.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -std=gnu++20
+  INCLUDES = -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug -I/Users/shania/cs1230/projects-realtime-zguo47 -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/projects_realtime_autogen/include -I/Users/shania/cs1230/projects-realtime-zguo47/src -I/Users/shania/cs1230/projects-realtime-zguo47/projects_realtime -I/Users/shania/cs1230/projects-realtime-zguo47/PRIVATE -I/Users/shania/cs1230/projects-realtime-zguo47/glew/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtCore.framework/Headers -iframework /Users/shania/Qt/6.5.2/macos/lib -isystem /Users/shania/Qt/6.5.2/macos/mkspecs/macx-clang -isystem /Users/shania/Qt/6.5.2/macos/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtGui.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGL.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGLWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/projects_realtime.dir
+  OBJECT_FILE_DIR = CMakeFiles/projects_realtime.dir/src/utils
+
+build CMakeFiles/projects_realtime.dir/src/utils/sceneparser.cpp.o: CXX_COMPILER__projects_realtime_Debug /Users/shania/cs1230/projects-realtime-zguo47/src/utils/sceneparser.cpp || cmake_object_order_depends_target_projects_realtime
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/projects_realtime.dir/src/utils/sceneparser.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -std=gnu++20
+  INCLUDES = -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug -I/Users/shania/cs1230/projects-realtime-zguo47 -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/projects_realtime_autogen/include -I/Users/shania/cs1230/projects-realtime-zguo47/src -I/Users/shania/cs1230/projects-realtime-zguo47/projects_realtime -I/Users/shania/cs1230/projects-realtime-zguo47/PRIVATE -I/Users/shania/cs1230/projects-realtime-zguo47/glew/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtCore.framework/Headers -iframework /Users/shania/Qt/6.5.2/macos/lib -isystem /Users/shania/Qt/6.5.2/macos/mkspecs/macx-clang -isystem /Users/shania/Qt/6.5.2/macos/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtGui.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGL.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGLWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/projects_realtime.dir
+  OBJECT_FILE_DIR = CMakeFiles/projects_realtime.dir/src/utils
+
+build CMakeFiles/projects_realtime.dir/src/shapes/Cone.cpp.o: CXX_COMPILER__projects_realtime_Debug /Users/shania/cs1230/projects-realtime-zguo47/src/shapes/Cone.cpp || cmake_object_order_depends_target_projects_realtime
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/projects_realtime.dir/src/shapes/Cone.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -std=gnu++20
+  INCLUDES = -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug -I/Users/shania/cs1230/projects-realtime-zguo47 -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/projects_realtime_autogen/include -I/Users/shania/cs1230/projects-realtime-zguo47/src -I/Users/shania/cs1230/projects-realtime-zguo47/projects_realtime -I/Users/shania/cs1230/projects-realtime-zguo47/PRIVATE -I/Users/shania/cs1230/projects-realtime-zguo47/glew/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtCore.framework/Headers -iframework /Users/shania/Qt/6.5.2/macos/lib -isystem /Users/shania/Qt/6.5.2/macos/mkspecs/macx-clang -isystem /Users/shania/Qt/6.5.2/macos/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtGui.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGL.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGLWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/projects_realtime.dir
+  OBJECT_FILE_DIR = CMakeFiles/projects_realtime.dir/src/shapes
+
+build CMakeFiles/projects_realtime.dir/src/shapes/Cylinder.cpp.o: CXX_COMPILER__projects_realtime_Debug /Users/shania/cs1230/projects-realtime-zguo47/src/shapes/Cylinder.cpp || cmake_object_order_depends_target_projects_realtime
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/projects_realtime.dir/src/shapes/Cylinder.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -std=gnu++20
+  INCLUDES = -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug -I/Users/shania/cs1230/projects-realtime-zguo47 -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/projects_realtime_autogen/include -I/Users/shania/cs1230/projects-realtime-zguo47/src -I/Users/shania/cs1230/projects-realtime-zguo47/projects_realtime -I/Users/shania/cs1230/projects-realtime-zguo47/PRIVATE -I/Users/shania/cs1230/projects-realtime-zguo47/glew/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtCore.framework/Headers -iframework /Users/shania/Qt/6.5.2/macos/lib -isystem /Users/shania/Qt/6.5.2/macos/mkspecs/macx-clang -isystem /Users/shania/Qt/6.5.2/macos/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtGui.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGL.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGLWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/projects_realtime.dir
+  OBJECT_FILE_DIR = CMakeFiles/projects_realtime.dir/src/shapes
+
+build CMakeFiles/projects_realtime.dir/src/shapes/Cube.cpp.o: CXX_COMPILER__projects_realtime_Debug /Users/shania/cs1230/projects-realtime-zguo47/src/shapes/Cube.cpp || cmake_object_order_depends_target_projects_realtime
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/projects_realtime.dir/src/shapes/Cube.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -std=gnu++20
+  INCLUDES = -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug -I/Users/shania/cs1230/projects-realtime-zguo47 -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/projects_realtime_autogen/include -I/Users/shania/cs1230/projects-realtime-zguo47/src -I/Users/shania/cs1230/projects-realtime-zguo47/projects_realtime -I/Users/shania/cs1230/projects-realtime-zguo47/PRIVATE -I/Users/shania/cs1230/projects-realtime-zguo47/glew/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtCore.framework/Headers -iframework /Users/shania/Qt/6.5.2/macos/lib -isystem /Users/shania/Qt/6.5.2/macos/mkspecs/macx-clang -isystem /Users/shania/Qt/6.5.2/macos/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtGui.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGL.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGLWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/projects_realtime.dir
+  OBJECT_FILE_DIR = CMakeFiles/projects_realtime.dir/src/shapes
+
+build CMakeFiles/projects_realtime.dir/src/shapes/Sphere.cpp.o: CXX_COMPILER__projects_realtime_Debug /Users/shania/cs1230/projects-realtime-zguo47/src/shapes/Sphere.cpp || cmake_object_order_depends_target_projects_realtime
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/projects_realtime.dir/src/shapes/Sphere.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -std=gnu++20
+  INCLUDES = -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug -I/Users/shania/cs1230/projects-realtime-zguo47 -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/projects_realtime_autogen/include -I/Users/shania/cs1230/projects-realtime-zguo47/src -I/Users/shania/cs1230/projects-realtime-zguo47/projects_realtime -I/Users/shania/cs1230/projects-realtime-zguo47/PRIVATE -I/Users/shania/cs1230/projects-realtime-zguo47/glew/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtCore.framework/Headers -iframework /Users/shania/Qt/6.5.2/macos/lib -isystem /Users/shania/Qt/6.5.2/macos/mkspecs/macx-clang -isystem /Users/shania/Qt/6.5.2/macos/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtGui.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGL.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGLWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/projects_realtime.dir
+  OBJECT_FILE_DIR = CMakeFiles/projects_realtime.dir/src/shapes
+
+build CMakeFiles/projects_realtime.dir/src/camera/camera.cpp.o: CXX_COMPILER__projects_realtime_Debug /Users/shania/cs1230/projects-realtime-zguo47/src/camera/camera.cpp || cmake_object_order_depends_target_projects_realtime
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/projects_realtime.dir/src/camera/camera.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -std=gnu++20
+  INCLUDES = -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug -I/Users/shania/cs1230/projects-realtime-zguo47 -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/projects_realtime_autogen/include -I/Users/shania/cs1230/projects-realtime-zguo47/src -I/Users/shania/cs1230/projects-realtime-zguo47/projects_realtime -I/Users/shania/cs1230/projects-realtime-zguo47/PRIVATE -I/Users/shania/cs1230/projects-realtime-zguo47/glew/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtCore.framework/Headers -iframework /Users/shania/Qt/6.5.2/macos/lib -isystem /Users/shania/Qt/6.5.2/macos/mkspecs/macx-clang -isystem /Users/shania/Qt/6.5.2/macos/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtGui.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGL.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGLWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/projects_realtime.dir
+  OBJECT_FILE_DIR = CMakeFiles/projects_realtime.dir/src/camera
+
+build CMakeFiles/projects_realtime.dir/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/.rcc/qrc_Resources.cpp.o: CXX_COMPILER__projects_realtime_Debug /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/.rcc/qrc_Resources.cpp || cmake_object_order_depends_target_projects_realtime
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/projects_realtime.dir/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/.rcc/qrc_Resources.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -std=gnu++20
+  INCLUDES = -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug -I/Users/shania/cs1230/projects-realtime-zguo47 -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/projects_realtime_autogen/include -I/Users/shania/cs1230/projects-realtime-zguo47/src -I/Users/shania/cs1230/projects-realtime-zguo47/projects_realtime -I/Users/shania/cs1230/projects-realtime-zguo47/PRIVATE -I/Users/shania/cs1230/projects-realtime-zguo47/glew/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtCore.framework/Headers -iframework /Users/shania/Qt/6.5.2/macos/lib -isystem /Users/shania/Qt/6.5.2/macos/mkspecs/macx-clang -isystem /Users/shania/Qt/6.5.2/macos/include -isystem /Users/shania/Qt/6.5.2/macos/lib/QtGui.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGL.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtOpenGLWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtWidgets.framework/Headers -isystem /Users/shania/Qt/6.5.2/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/projects_realtime.dir
+  OBJECT_FILE_DIR = CMakeFiles/projects_realtime.dir/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/.rcc
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target projects_realtime
+
+
+#############################################
+# Link the executable projects_realtime
+
+build projects_realtime: CXX_EXECUTABLE_LINKER__projects_realtime_Debug CMakeFiles/projects_realtime.dir/projects_realtime_autogen/mocs_compilation.cpp.o CMakeFiles/projects_realtime.dir/src/main.cpp.o CMakeFiles/projects_realtime.dir/src/realtime.cpp.o CMakeFiles/projects_realtime.dir/src/mainwindow.cpp.o CMakeFiles/projects_realtime.dir/src/settings.cpp.o CMakeFiles/projects_realtime.dir/src/utils/scenefilereader.cpp.o CMakeFiles/projects_realtime.dir/src/utils/sceneparser.cpp.o CMakeFiles/projects_realtime.dir/src/shapes/Cone.cpp.o CMakeFiles/projects_realtime.dir/src/shapes/Cylinder.cpp.o CMakeFiles/projects_realtime.dir/src/shapes/Cube.cpp.o CMakeFiles/projects_realtime.dir/src/shapes/Sphere.cpp.o CMakeFiles/projects_realtime.dir/src/camera/camera.cpp.o CMakeFiles/projects_realtime.dir/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/.rcc/qrc_Resources.cpp.o | libStaticGLEW.a /Users/shania/Qt/6.5.2/macos/lib/QtOpenGLWidgets.framework/Versions/A/QtOpenGLWidgets /Users/shania/Qt/6.5.2/macos/lib/QtOpenGL.framework/Versions/A/QtOpenGL /Users/shania/Qt/6.5.2/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/shania/Qt/6.5.2/macos/lib/QtGui.framework/Versions/A/QtGui /Users/shania/Qt/6.5.2/macos/lib/QtXml.framework/Versions/A/QtXml /Users/shania/Qt/6.5.2/macos/lib/QtCore.framework/Versions/A/QtCore || libStaticGLEW.a projects_realtime_autogen projects_realtime_autogen_timestamp_deps
+  FLAGS = -Wno-deprecated-volatile -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
+  LINK_LIBRARIES = -Wl,-rpath,/Users/shania/Qt/6.5.2/macos/lib  libStaticGLEW.a  /Users/shania/Qt/6.5.2/macos/lib/QtOpenGLWidgets.framework/Versions/A/QtOpenGLWidgets  /Users/shania/Qt/6.5.2/macos/lib/QtOpenGL.framework/Versions/A/QtOpenGL  /Users/shania/Qt/6.5.2/macos/lib/QtWidgets.framework/Versions/A/QtWidgets  /Users/shania/Qt/6.5.2/macos/lib/QtGui.framework/Versions/A/QtGui  -Xlinker -framework -Xlinker OpenGL  -Xlinker -framework -Xlinker AGL  -framework AppKit  -framework ImageIO  -framework Metal  /Users/shania/Qt/6.5.2/macos/lib/QtXml.framework/Versions/A/QtXml  /Users/shania/Qt/6.5.2/macos/lib/QtCore.framework/Versions/A/QtCore  -framework IOKit  -framework DiskArbitration
+  LINK_PATH = -F/Users/shania/Qt/6.5.2/macos/lib
+  OBJECT_DIR = CMakeFiles/projects_realtime.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = projects_realtime
+  TARGET_PDB = projects_realtime.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target StaticGLEW
+
+
+#############################################
+# Order-only phony target for StaticGLEW
+
+build cmake_object_order_depends_target_StaticGLEW: phony || StaticGLEW_autogen StaticGLEW_autogen/mocs_compilation.cpp StaticGLEW_autogen/timestamp StaticGLEW_autogen_timestamp_deps
+
+build CMakeFiles/StaticGLEW.dir/StaticGLEW_autogen/mocs_compilation.cpp.o: CXX_COMPILER__StaticGLEW_Debug /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/StaticGLEW_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_StaticGLEW
+  DEP_FILE = CMakeFiles/StaticGLEW.dir/StaticGLEW_autogen/mocs_compilation.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -std=gnu++20
+  INCLUDES = -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug -I/Users/shania/cs1230/projects-realtime-zguo47 -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/StaticGLEW_autogen/include -I/Users/shania/cs1230/projects-realtime-zguo47/src -I/Users/shania/cs1230/projects-realtime-zguo47/projects_realtime -I/Users/shania/cs1230/projects-realtime-zguo47/PRIVATE -I/Users/shania/cs1230/projects-realtime-zguo47/glew/include
+  OBJECT_DIR = CMakeFiles/StaticGLEW.dir
+  OBJECT_FILE_DIR = CMakeFiles/StaticGLEW.dir/StaticGLEW_autogen
+
+build CMakeFiles/StaticGLEW.dir/glew/src/glew.c.o: C_COMPILER__StaticGLEW_Debug /Users/shania/cs1230/projects-realtime-zguo47/glew/src/glew.c || cmake_object_order_depends_target_StaticGLEW
+  DEP_FILE = CMakeFiles/StaticGLEW.dir/glew/src/glew.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
+  INCLUDES = -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug -I/Users/shania/cs1230/projects-realtime-zguo47 -I/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/StaticGLEW_autogen/include -I/Users/shania/cs1230/projects-realtime-zguo47/src -I/Users/shania/cs1230/projects-realtime-zguo47/projects_realtime -I/Users/shania/cs1230/projects-realtime-zguo47/PRIVATE -I/Users/shania/cs1230/projects-realtime-zguo47/glew/include
+  OBJECT_DIR = CMakeFiles/StaticGLEW.dir
+  OBJECT_FILE_DIR = CMakeFiles/StaticGLEW.dir/glew/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target StaticGLEW
+
+
+#############################################
+# Link the static library libStaticGLEW.a
+
+build libStaticGLEW.a: CXX_STATIC_LIBRARY_LINKER__StaticGLEW_Debug CMakeFiles/StaticGLEW.dir/StaticGLEW_autogen/mocs_compilation.cpp.o CMakeFiles/StaticGLEW.dir/glew/src/glew.c.o || StaticGLEW_autogen StaticGLEW_autogen_timestamp_deps
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
+  LANGUAGE_COMPILE_FLAGS = -Wno-deprecated-volatile -g
+  OBJECT_DIR = CMakeFiles/StaticGLEW.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = libStaticGLEW.a
+  TARGET_PDB = StaticGLEW.a.dbg
+
+
+#############################################
+# Utility command for projects_realtime_other_files
+
+build projects_realtime_other_files: phony
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug && /Users/shania/Qt/Tools/CMake/CMake.app/Contents/bin/ccmake -S/Users/shania/cs1230/projects-realtime-zguo47 -B/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug && /Users/shania/Qt/Tools/CMake/CMake.app/Contents/bin/cmake --regenerate-during-build -S/Users/shania/cs1230/projects-realtime-zguo47 -B/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug && /Users/shania/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug && /Users/shania/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug && /Users/shania/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+
+#############################################
+# Utility command for projects_realtime_autogen_timestamp_deps
+
+build projects_realtime_autogen_timestamp_deps: phony CMakeFiles/projects_realtime_autogen_timestamp_deps libStaticGLEW.a
+
+
+#############################################
+# Utility command for projects_realtime_autogen
+
+build projects_realtime_autogen: phony CMakeFiles/projects_realtime_autogen projects_realtime_autogen/timestamp projects_realtime_autogen/mocs_compilation.cpp projects_realtime_autogen_timestamp_deps
+
+
+#############################################
+# Utility command for StaticGLEW_autogen_timestamp_deps
+
+build StaticGLEW_autogen_timestamp_deps: phony CMakeFiles/StaticGLEW_autogen_timestamp_deps
+
+
+#############################################
+# Utility command for StaticGLEW_autogen
+
+build StaticGLEW_autogen: phony CMakeFiles/StaticGLEW_autogen StaticGLEW_autogen/timestamp StaticGLEW_autogen/mocs_compilation.cpp StaticGLEW_autogen_timestamp_deps
+
+
+#############################################
+# Custom command for .rcc/qrc_Resources.cpp
+
+build .rcc/qrc_Resources.cpp | ${cmake_ninja_workdir}.rcc/qrc_Resources.cpp: CUSTOM_COMMAND /Users/shania/cs1230/projects-realtime-zguo47/resources/shaders/default.frag /Users/shania/cs1230/projects-realtime-zguo47/resources/shaders/default.vert .rcc/Resources.qrc /Users/shania/Qt/6.5.2/macos/./libexec/rcc || StaticGLEW_autogen StaticGLEW_autogen_timestamp_deps libStaticGLEW.a projects_realtime_autogen projects_realtime_autogen_timestamp_deps
+  COMMAND = cd /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug && /Users/shania/Qt/6.5.2/macos/./libexec/rcc --output /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/.rcc/qrc_Resources.cpp --name Resources /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/.rcc/Resources.qrc --no-zstd
+  DESC = Running rcc for resource Resources
+  restat = 1
+
+
+#############################################
+# Custom command for projects_realtime_autogen/timestamp
+
+build projects_realtime_autogen/timestamp projects_realtime_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}projects_realtime_autogen/timestamp ${cmake_ninja_workdir}projects_realtime_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /Users/shania/Qt/6.5.2/macos/./libexec/moc /Users/shania/Qt/6.5.2/macos/./libexec/uic || StaticGLEW_autogen StaticGLEW_autogen_timestamp_deps libStaticGLEW.a projects_realtime_autogen_timestamp_deps
+  COMMAND = cd /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug && /Users/shania/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E cmake_autogen /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/CMakeFiles/projects_realtime_autogen.dir/AutogenInfo.json Debug && /Users/shania/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E touch /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/projects_realtime_autogen/timestamp && /Users/shania/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /Users/shania/cs1230/projects-realtime-zguo47 /Users/shania/cs1230/projects-realtime-zguo47 /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/projects_realtime_autogen/deps /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/CMakeFiles/d/de45a78882fbb55ad23f9e8c07478b5d4fb907c3c2f28012b1273c3d867fa96e.d
+  DESC = Automatic MOC and UIC for target projects_realtime
+  depfile = /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/CMakeFiles/d/de45a78882fbb55ad23f9e8c07478b5d4fb907c3c2f28012b1273c3d867fa96e.d
+  restat = 1
+
+
+#############################################
+# Custom command for StaticGLEW_autogen/timestamp
+
+build StaticGLEW_autogen/timestamp StaticGLEW_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}StaticGLEW_autogen/timestamp ${cmake_ninja_workdir}StaticGLEW_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /Users/shania/Qt/6.5.2/macos/./libexec/moc /Users/shania/Qt/6.5.2/macos/./libexec/uic || StaticGLEW_autogen_timestamp_deps
+  COMMAND = cd /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug && /Users/shania/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E cmake_autogen /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/CMakeFiles/StaticGLEW_autogen.dir/AutogenInfo.json Debug && /Users/shania/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E touch /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/StaticGLEW_autogen/timestamp && /Users/shania/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /Users/shania/cs1230/projects-realtime-zguo47 /Users/shania/cs1230/projects-realtime-zguo47 /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/StaticGLEW_autogen/deps /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/CMakeFiles/d/0a5bf60faccf3961a0e77339ef831bdddfc7ec2445ae3b9cd2fb9232e2f98006.d
+  DESC = Automatic MOC and UIC for target StaticGLEW
+  depfile = /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/CMakeFiles/d/0a5bf60faccf3961a0e77339ef831bdddfc7ec2445ae3b9cd2fb9232e2f98006.d
+  restat = 1
+
+
+#############################################
+# Phony custom command for CMakeFiles/projects_realtime_autogen_timestamp_deps
+
+build CMakeFiles/projects_realtime_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/projects_realtime_autogen_timestamp_deps: phony libStaticGLEW.a /Users/shania/Qt/6.5.2/macos/./libexec/moc /Users/shania/Qt/6.5.2/macos/./libexec/uic || StaticGLEW_autogen StaticGLEW_autogen_timestamp_deps libStaticGLEW.a
+
+
+#############################################
+# Phony custom command for CMakeFiles/projects_realtime_autogen
+
+build CMakeFiles/projects_realtime_autogen | ${cmake_ninja_workdir}CMakeFiles/projects_realtime_autogen: phony projects_realtime_autogen/timestamp || StaticGLEW_autogen StaticGLEW_autogen_timestamp_deps libStaticGLEW.a projects_realtime_autogen_timestamp_deps
+
+
+#############################################
+# Phony custom command for CMakeFiles/StaticGLEW_autogen_timestamp_deps
+
+build CMakeFiles/StaticGLEW_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/StaticGLEW_autogen_timestamp_deps: phony /Users/shania/Qt/6.5.2/macos/./libexec/moc /Users/shania/Qt/6.5.2/macos/./libexec/uic
+
+
+#############################################
+# Phony custom command for CMakeFiles/StaticGLEW_autogen
+
+build CMakeFiles/StaticGLEW_autogen | ${cmake_ninja_workdir}CMakeFiles/StaticGLEW_autogen: phony StaticGLEW_autogen/timestamp || StaticGLEW_autogen_timestamp_deps
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/shania/cs1230/projects-realtime-zguo47/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build glm/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/glm && /Users/shania/Qt/Tools/CMake/CMake.app/Contents/bin/ccmake -S/Users/shania/cs1230/projects-realtime-zguo47 -B/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build glm/edit_cache: phony glm/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build glm/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/glm && /Users/shania/Qt/Tools/CMake/CMake.app/Contents/bin/cmake --regenerate-during-build -S/Users/shania/cs1230/projects-realtime-zguo47 -B/Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build glm/rebuild_cache: phony glm/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build glm/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build glm/CMakeFiles/install.util: CUSTOM_COMMAND glm/all
+  COMMAND = cd /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/glm && /Users/shania/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build glm/install: phony glm/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build glm/CMakeFiles/install/local.util: CUSTOM_COMMAND glm/all
+  COMMAND = cd /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/glm && /Users/shania/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build glm/install/local: phony glm/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build glm/CMakeFiles/install/strip.util: CUSTOM_COMMAND glm/all
+  COMMAND = cd /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/glm && /Users/shania/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build glm/install/strip: phony glm/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Target aliases.
+
+build StaticGLEW: phony libStaticGLEW.a
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug
+
+build all: phony projects_realtime libStaticGLEW.a glm/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/shania/cs1230/projects-realtime-zguo47/build/build-projects-realtime-zguo47-Qt_6_5_2_for_macOS_e6f3b6-Debug/glm
+
+build glm/all: phony
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | .qtc/package-manager/auto-setup.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/FindWrapAtomic.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/FindWrapOpenGL.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/Qt6Config.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/Qt6ConfigExtras.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/Qt6ConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/Qt6Dependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/Qt6Targets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/Qt6VersionlessTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtFeature.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtFeatureCommon.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtPublicAppleHelpers.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtPublicPluginHelpers.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtPublicTargetHelpers.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtPublicTestHelpers.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtPublicToolHelpers.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CoreConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CoreMacros.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CorePlugins.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CoreTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/QtInstallPaths.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBus/Qt6DBusConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBus/Qt6DBusDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBus/Qt6DBusMacros.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBus/Qt6DBusTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBus/Qt6DBusTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBus/Qt6DBusVersionlessTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6GuiTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QGifPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QGifPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QGifPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QGifPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QICOPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QICOPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QICOPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QICOPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QJpegPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QJpegPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QSvgIconPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QSvgIconPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QSvgPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QSvgPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLVersionlessTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsVersionlessTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6QMacStylePluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6QMacStylePluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6WidgetsPlugins.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6WidgetsTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Xml/Qt6XmlAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Xml/Qt6XmlConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Xml/Qt6XmlConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Xml/Qt6XmlConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Xml/Qt6XmlDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Xml/Qt6XmlTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Xml/Qt6XmlTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Xml/Qt6XmlVersionlessTargets.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCInformation.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckCXXCompilerFlag.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckCXXSourceCompiles.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckIncludeFile.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckLibraryExists.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/Clang.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/GNU.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/FindOpenGL.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/FindPackageMessage.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/FindThreads.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/GNUInstallDirs.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Internal/CheckCompilerFlag.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Internal/CheckFlagCommonConfig.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/MacroAddFileDependencies.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Darwin.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Users/shania/cs1230/projects-realtime-zguo47/CMakeLists.txt /Users/shania/cs1230/projects-realtime-zguo47/glm/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build .qtc/package-manager/auto-setup.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/FindWrapAtomic.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/FindWrapOpenGL.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/Qt6Config.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/Qt6ConfigExtras.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/Qt6ConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/Qt6Dependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/Qt6Targets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/Qt6VersionlessTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtFeature.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtFeatureCommon.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtPublicAppleHelpers.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtPublicPluginHelpers.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtPublicTargetHelpers.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtPublicTestHelpers.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtPublicToolHelpers.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CoreConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CoreMacros.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CorePlugins.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CoreTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Core/QtInstallPaths.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBus/Qt6DBusConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBus/Qt6DBusDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBus/Qt6DBusMacros.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBus/Qt6DBusTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBus/Qt6DBusTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBus/Qt6DBusVersionlessTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6GuiTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QGifPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QGifPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QGifPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QGifPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QICOPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QICOPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QICOPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QICOPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QJpegPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QJpegPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QSvgIconPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QSvgIconPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QSvgPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QSvgPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGL/Qt6OpenGLVersionlessTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsVersionlessTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6QMacStylePluginAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6QMacStylePluginConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6WidgetsPlugins.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6WidgetsTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Xml/Qt6XmlAdditionalTargetInfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Xml/Qt6XmlConfig.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Xml/Qt6XmlConfigVersion.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Xml/Qt6XmlConfigVersionImpl.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Xml/Qt6XmlDependencies.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Xml/Qt6XmlTargets-relwithdebinfo.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Xml/Qt6XmlTargets.cmake /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Xml/Qt6XmlVersionlessTargets.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCInformation.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckCXXCompilerFlag.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckCXXSourceCompiles.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckIncludeFile.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckLibraryExists.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/Clang.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/GNU.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/FindOpenGL.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/FindPackageMessage.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/FindThreads.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/GNUInstallDirs.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Internal/CheckCompilerFlag.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Internal/CheckFlagCommonConfig.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/MacroAddFileDependencies.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Darwin.cmake /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Users/shania/cs1230/projects-realtime-zguo47/CMakeLists.txt /Users/shania/cs1230/projects-realtime-zguo47/glm/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean additional files.
+
+build CMakeFiles/clean.additional: CLEAN_ADDITIONAL
+  CONFIG = Debug
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN CMakeFiles/clean.additional
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all

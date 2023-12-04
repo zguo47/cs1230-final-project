@@ -1,0 +1,2505 @@
+{
+  
+  "name": "point_light_1",
+  "globalData": {
+    "ambientCoeff": 0.5,
+    "diffuseCoeff": 0.5,
+    "specularCoeff": 0.5,
+    "transparentCoeff": 0
+  },
+  "cameraData": {
+    "position": [
+      -6,
+      4,
+      4
+    ],
+    "up": [
+      0,
+      1,
+      0
+    ],
+    "heightAngle": 30,
+    "focus": [
+      0,
+      0,
+      0
+    ]
+  },
+  "groups": [
+    {
+      
+      "translate": [
+        0,
+        10,
+        0
+      ],
+      "rotate": [
+        0,
+        5,
+        0,
+        90
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "lights": [
+        {
+          "type": "directional",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "direction": [
+            1,
+            1,
+            1
+          ]}
+      ]
+    },
+    {
+      "lights": [
+        {
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "type": "directional",
+          "direction": [
+            1,
+            1,
+            1
+          ],
+          
+          "penumbra": 0,
+          "angle": 0,
+          "attenuationCoeff": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "translate": [
+        0,
+        10,
+        0
+      ]},
+    {
+      "name": "Part1",
+      "translate": [
+        -25,
+        0,
+        25
+      ],
+      "groups": [
+        {
+          "name": "Part1-Cubes 62-64 left",
+          "translate": [
+            0,
+            0,
+            0
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "groups": [
+            {
+              "name": "Cube 62 left",
+              "primitives": [
+                {
+                  "ambient": [
+                    0.5,
+                    0.5,
+                    0.5
+                  ],
+                  "diffuse": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "specular": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "shininess": 1,
+                  "type": "cube"}
+              ],
+              "translate": [
+                32,
+                0,
+                -63
+              ],
+              "rotate": [
+                0,
+                1,
+                0,
+                0
+              ],
+              "scale": [
+                5,
+                7,
+                4
+              ]}
+          ]},
+        {
+          "name": "Part1-Cube 61 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            36.5,
+            0,
+            -61.5
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            -45
+          ],
+          "scale": [
+            2,
+            2,
+            1
+          ],
+          "groups": []},
+        {
+          "name": "Part1-Cube 60 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            47.75,
+            0,
+            -52.25
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            -35
+          ],
+          "scale": [
+            2.5,
+            3,
+            1.5
+          ]},
+        {
+          "name": "Part1-Cube 59 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            45,
+            0,
+            -50.75
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            3,
+            3,
+            1.5
+          ]},
+        {
+          "name": "Part1-Cube 58 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            49.61,
+            0,
+            -47
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            4,
+            3,
+            4
+          ]},
+        {
+          "name": "Part1-Cube 57 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            54,
+            0,
+            -39
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            3,
+            3,
+            3
+          ]},
+        {
+          "name": "Part1-Cube 56 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            44.5,
+            0,
+            -39
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            15,
+            2,
+            3.2
+          ]},
+        {
+          "name": "Part1-Cube 55 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            47,
+            0,
+            -31.75
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            20,
+            2,
+            9.5
+          ]},
+        {
+          "name": "Part1-Cube 54 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            35.25,
+            -0.4,
+            -58
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            4,
+            1,
+            4
+          ]},
+        {
+          "name": "Part1-Cube 53 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            13.5,
+            -0.3,
+            -55.75
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            30,
+            1,
+            5
+          ]},
+        {
+          "name": "Part1-Cube 52 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            42,
+            -0.2,
+            -46.9
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            10,
+            1,
+            5
+          ]},
+        {
+          "name": "Part1-Cube 51 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            42.5,
+            -0.1,
+            -42.5
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            20,
+            1,
+            2
+          ]},
+        {
+          "name": "Part1-Cube 50 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            31,
+            -0.4,
+            -54
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            3.5,
+            1,
+            7
+          ]},
+        {
+          "name": "Part1-Cube 49 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            26.25,
+            -0.2,
+            -51
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            5,
+            1,
+            3
+          ]},
+        {
+          "name": "Part1-Cube 48 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            26.25,
+            -0.5,
+            -47
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            5,
+            1,
+            4
+          ]},
+        {
+          "name": "Part1-Cube 47 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            22,
+            0,
+            -47.5
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            2.5,
+            1,
+            10
+          ]},
+        {
+          "name": "Part1-Cube 46 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            16,
+            -0.1,
+            -47.5
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            8,
+            1,
+            10
+          ]},
+        {
+          "name": "Part1-Cube 45 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            5.87,
+            -0.3,
+            -40.25
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            35,
+            1,
+            3.09
+          ]},
+        {
+          "name": "Part1-Cube 44 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            29.5,
+            -0.3,
+            -37.7
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            4.5,
+            1,
+            2.5
+          ]},
+        {
+          "name": "Part1-Cube 43 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            34.4,
+            -0.1,
+            -36.75
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            4,
+            1,
+            8
+          ]},
+        {
+          "name": "Part1-Cube 42 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            34.38,
+            -0.2,
+            -29.47
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            4,
+            1,
+            5
+          ]},
+        {
+          "name": "Part1-Cube 41 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            29.5,
+            -0.3,
+            -31.25
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            4.5,
+            1,
+            9
+          ]},
+        {
+          "name": "Part1-Cube 40 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            21.75,
+            -0.2,
+            -35
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            2.75,
+            1,
+            1.5
+          ]},
+        {
+          "name": "Part1-Cube 39 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            22,
+            -0.5,
+            -32
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            3,
+            1,
+            3
+          ]},
+        {
+          "name": "Part1-Cube 38 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            18.5,
+            -0.2,
+            -33.76
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            2.5,
+            1,
+            4
+          ],
+          "groups": []},
+        {
+          "name": "Part1-Cube 37 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            13,
+            -0.34,
+            -36
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            3.5,
+            1,
+            4.3
+          ]},
+        {
+          "name": "Part1-Cube 36 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            14.64,
+            -0.2,
+            -29.53
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            2.7,
+            1,
+            2.7
+          ]},
+        {
+          "name": "Part1-Cube 35 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            -5,
+            -0.3,
+            -32
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            29,
+            1,
+            8
+          ]},
+        {
+          "name": "Part1-Cube 34 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            30.2,
+            -0.4,
+            -25.25
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            21,
+            1,
+            2
+          ]},
+        {
+          "name": "Part1-Cube 33 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            30.5,
+            -0.15,
+            -20.36
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            22,
+            1,
+            6.5
+          ]},
+        {
+          "name": "Part1-Cube 32 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            17,
+            -0.2,
+            -22
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            4,
+            1,
+            3
+          ]},
+        {
+          "name": "Part1-Cube 31 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            14,
+            -0.2,
+            -18.53
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            10,
+            1,
+            2.61
+          ]},
+        {
+          "name": "Part1-Cube 30 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            -5,
+            -0.4,
+            -26.2
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            30,
+            1,
+            2.5
+          ]},
+        {
+          "name": "Part1-Cube 29 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            -8,
+            -0.2,
+            -20
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            25,
+            1,
+            9
+          ]},
+        {
+          "name": "Part1-Cube 28 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            -8,
+            -0.3,
+            -13.89
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            25,
+            1,
+            2.5
+          ]},
+        {
+          "name": "Part1-Cube 27 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            0.91,
+            0,
+            -10.23
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            1.93,
+            1,
+            3.42
+          ]},
+        {
+          "name": "Part1-Cube 26 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            -10.5,
+            0,
+            -9.12
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            20,
+            1,
+            6
+          ]},
+        {
+          "name": "Part1-Cube 25 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            -7,
+            -0.3,
+            -4.71
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            6,
+            1,
+            2
+          ]},
+        {
+          "name": "Part1-Cube 24 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            -7,
+            -0.2,
+            -0.4
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            6,
+            1,
+            6
+          ]},
+        {
+          "name": "Part1-Cube 23 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            18.65,
+            -0.4,
+            -12.78
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            20,
+            1,
+            8
+          ]},
+        {
+          "name": "Part1-Cube 22 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            14,
+            -0.35,
+            -5
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            11,
+            1,
+            6
+          ]},
+        {
+          "name": "Part1-Cube-21 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            6.82,
+            -0.3,
+            -6.45
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            2.42,
+            1,
+            2.75
+          ]},
+        {
+          "name": "Part1-Cube 20 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            5.5,
+            -0.1,
+            -3.25
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            5,
+            1,
+            2.75
+          ]},
+        {
+          "name": "Part1-Cube19 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            13,
+            -0.3,
+            0
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            17.5,
+            1,
+            3
+          ]},
+        {
+          "name": "Part1-Cube18 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            2.17,
+            -0.2,
+            0
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            3.5,
+            1,
+            3
+          ]},
+        {
+          "name": "Part1-Cube17 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            8.09,
+            -0.3,
+            3.75
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            5,
+            1,
+            4
+          ]},
+        {
+          "name": "Part1-Cube16 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            2.8,
+            -0.4,
+            3.75
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            5,
+            1,
+            4
+          ]},
+        {
+          "name": "Part1-Cube15 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            9.2,
+            -0.1,
+            15.2
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            3.5,
+            1,
+            18
+          ]},
+        {
+          "name": "Part1-Cube14 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            5.45,
+            -0.2,
+            11.71
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            3.5,
+            1,
+            11
+          ]},
+        {
+          "name": "Part1-Cube13 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            2.58,
+            -0.3,
+            11.71
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            2,
+            1,
+            11
+          ]},
+        {
+          "name": "Part1-Cube12 right",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            -0.87,
+            -0.15,
+            8.54
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            4,
+            1,
+            3
+          ]},
+        {
+          "name": "Part1-Cube11 left",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            -8.5,
+            -0.5,
+            4.65
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            3,
+            1,
+            3
+          ]},
+        {
+          "name": "Part1-Cube10",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            -2.75,
+            -0.15,
+            13.81
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            8,
+            1,
+            6.8
+          ]},
+        {
+          "name": "Part1-Cube9",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            -16.5,
+            -0.2,
+            0.22
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            12,
+            1,
+            10
+          ]},
+        {
+          "name": "Part1-Cube8",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            -0.25,
+            -0.4,
+            19.68
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            11,
+            1,
+            4
+          ]},
+        {
+          "name": "Part1-Cube7",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            -5.25,
+            -0.15,
+            25.5
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            9,
+            1,
+            7
+          ]},
+        {
+          "name": "Part1-Cube6",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            -8,
+            -0.5,
+            19.7
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            4,
+            1,
+            4
+          ]},
+        {
+          "name": "Part1-Cube5",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            -15,
+            -0.3,
+            9.5
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            8.5,
+            1,
+            8
+          ]},
+        {
+          "name": "Part1-Cube4",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            -22,
+            -0.2,
+            9.5
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            5,
+            1,
+            8
+          ]},
+        {
+          "name": "Part1-Cube3",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            -12.7,
+            -0.2,
+            22
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            5,
+            1,
+            7
+          ]},
+        {
+          "name": "Part1-Cube2",
+          "primitives": [
+            {
+              "ambient": [
+                0.5,
+                0.5,
+                0.5
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            -17,
+            -0.5,
+            22
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            3,
+            1,
+            7
+          ]},
+        {
+          "name": "Part1-Cube1",
+          "primitives": [
+            {
+              "ambient": [
+                1,
+                1,
+                1
+              ],
+              "diffuse": [
+                1,
+                1,
+                1
+              ],
+              "specular": [
+                1,
+                1,
+                1
+              ],
+              "shininess": 1,
+              "type": "cube"}
+          ],
+          "translate": [
+            -21,
+            -0.3,
+            22
+          ],
+          "rotate": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "scale": [
+            4,
+            1,
+            7
+          ]},
+        {
+          "name": "Part1-ground",
+          "primitives": [
+            {
+              "ambient": [
+                0,
+                1,
+                0
+              ],
+              "diffuse": [
+                0.66,
+                1,
+                0.03
+              ],
+              "type": "cube"}
+          ],
+          "translate": [
+            16,
+            -0.9,
+            -16
+          ],
+          "scale": [
+            82,
+            0.5,
+            100
+          ]}
+      ]}
+  ]
+}

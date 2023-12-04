@@ -12,7 +12,7 @@
 void MainWindow::initialize() {
     realtime = new Realtime;
     aspectRatioWidget = new AspectRatioWidget(this);
-    aspectRatioWidget->setAspectWidget(realtime, 3.f/4.f);
+    aspectRatioWidget->setAspectWidget(realtime, 1.f);
     QHBoxLayout *hLayout = new QHBoxLayout; // horizontal alignment
     QVBoxLayout *vLayout = new QVBoxLayout(); // vertical alignment
     vLayout->setAlignment(Qt::AlignTop);

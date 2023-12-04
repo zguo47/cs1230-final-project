@@ -40,7 +40,10 @@ SceneCameraData Camera::getUpdatedRotation(SceneCameraData &camera, int deltaX, 
 
 SceneCameraData Camera::getUpdatedCameraData(SceneCameraData &camera, std::unordered_map<Qt::Key, bool> m_keyMap, float speed, float deltaTime) const {
     if (m_keyMap[Qt::Key_W]){
-        glm::vec4 translation = glm::normalize(camera.look) * speed * deltaTime;
+//        glm::vec4 translation = glm::normalize(camera.look) * speed * deltaTime;
+//        camera.pos += translation;
+        glm::vec4 translateDir = glm::normalize(glm::vec4(1.0f, 0.0f, -1.0f, 0.0f));
+        glm::vec4 translation = translateDir * speed * deltaTime;
         camera.pos += translation;
     }
     if (m_keyMap[Qt::Key_D]){
@@ -49,7 +52,10 @@ SceneCameraData Camera::getUpdatedCameraData(SceneCameraData &camera, std::unord
         camera.pos += translation;
     }
     if (m_keyMap[Qt::Key_S]){
-        glm::vec4 translation = glm::normalize(-camera.look) * speed * deltaTime;
+//        glm::vec4 translation = glm::normalize(-camera.look) * speed * deltaTime;
+//        camera.pos += translation;
+        glm::vec4 translateDir = glm::normalize(glm::vec4(1.0f, 0.0f, -1.0f, 0.0f));
+        glm::vec4 translation = -translateDir * speed * deltaTime;
         camera.pos += translation;
     }
     if (m_keyMap[Qt::Key_A]){

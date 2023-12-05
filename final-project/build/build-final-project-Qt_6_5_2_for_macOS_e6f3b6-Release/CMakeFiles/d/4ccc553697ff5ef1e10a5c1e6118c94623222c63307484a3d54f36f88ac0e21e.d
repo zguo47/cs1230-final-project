@@ -990,97 +990,26 @@ projects_realtime_autogen/timestamp: \
   /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Xml/Qt6XmlTargets-relwithdebinfo.cmake \
   /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Xml/Qt6XmlTargets.cmake \
   /Users/shania/Qt/6.5.2/macos/lib/cmake/Qt6Xml/Qt6XmlVersionlessTargets.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCCompiler.cmake.in \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCCompilerABI.c \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCInformation.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCXXInformation.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeDetermineCCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeDetermineCXXCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeGenericSystem.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeNinjaFindMake.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeSystem.cmake.in \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeTestCCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeTestCXXCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckCXXCompilerFlag.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckCXXSourceCompiles.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckIncludeFile.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckLibraryExists.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/Bruce-C-DetermineCompiler.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/Clang.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/Compaq-C-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/GNU-C-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/GNU.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/HP-C-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/LCC-C-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/SDCC-C-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/SunPro-C-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/XL-C-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/XLClang-C-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/zOS-C-DetermineCompiler.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/FindOpenGL.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/FindPackageMessage.cmake \
@@ -1089,14 +1018,12 @@ projects_realtime_autogen/timestamp: \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Internal/CheckCompilerFlag.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Internal/CheckFlagCommonConfig.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/MacroAddFileDependencies.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake \
-  /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Darwin-Determine-CXX.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Darwin.cmake \
   /Users/shania/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/UnixPaths.cmake \
@@ -1245,6 +1172,8 @@ projects_realtime_autogen/timestamp: \
   /Users/shania/cs1230/cs1230-final-project/final-project/src/main.cpp \
   /Users/shania/cs1230/cs1230-final-project/final-project/src/mainwindow.cpp \
   /Users/shania/cs1230/cs1230-final-project/final-project/src/mainwindow.h \
+  /Users/shania/cs1230/cs1230-final-project/final-project/src/objectmovement/objectmovement.cpp \
+  /Users/shania/cs1230/cs1230-final-project/final-project/src/objectmovement/objectmovement.h \
   /Users/shania/cs1230/cs1230-final-project/final-project/src/realtime.cpp \
   /Users/shania/cs1230/cs1230-final-project/final-project/src/realtime.h \
   /Users/shania/cs1230/cs1230-final-project/final-project/src/settings.cpp \

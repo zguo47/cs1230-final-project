@@ -1,5 +1,6 @@
 #include "realtime.h"
 #include "glm/ext/matrix_clip_space.hpp"
+#include "objectmovement/objectmovement.h"
 #include "shapes/Cone.h"
 #include "shapes/Cube.h"
 #include "shapes/Cylinder.h"
@@ -29,6 +30,7 @@ Realtime::Realtime(QWidget *parent)
     m_keyMap[Qt::Key_D]       = false;
     m_keyMap[Qt::Key_Control] = false;
     m_keyMap[Qt::Key_Space]   = false;
+    m_keyMap[Qt::Key_M]       = false;
 
     // If you must use this function, do not edit anything above this
 }
@@ -284,6 +286,7 @@ void Realtime::paintGL() {
 
 
     for (const RenderShapeData& shapeData : metaData.shapes) {
+
         glm::mat4 modelMatrix = shapeData.ctm; // The model matrix for the shape
         glUniformMatrix4fv(m_location, 1, GL_FALSE, &modelMatrix[0][0]);
 
@@ -374,6 +377,14 @@ void Realtime::sceneChanged() {
     RenderData temp;
     metaData = temp;
     bool success = SceneParser::parse(settings.sceneFilePath, metaData);
+    int idx = 0;
+    for (const RenderShapeData& shapeData : metaData.shapes) {
+        if (shapeData.primitive.object_type == objectType::PLAY_OBJECT){
+                playobject = shapeData;
+                playobjectindex = idx;
+        }
+        idx += 1;
+    }
     viewMatrix = camera.getViewMatrix(metaData.cameraData);
     float aspectRatio = camera.getAspectRatio(size().width() * m_devicePixelRatio, size().height() * m_devicePixelRatio);
     projectionMatrix = camera.getProjectionMatrix(metaData.cameraData, aspectRatio, settings.farPlane, settings.nearPlane);
@@ -391,6 +402,25 @@ void Realtime::settingsChanged() {
 
 void Realtime::keyPressEvent(QKeyEvent *event) {
     m_keyMap[Qt::Key(event->key())] = true;
+    if (event->key() == Qt::Key_M) {
+        // Toggle the isMoveLeft state
+        gameStart = true;
+        isMoveLeft = !isMoveLeft;
+
+        if(!m_onXDir){
+            m_onXDir = true;
+        }
+        else m_onXDir = false;
+
+        if (m_first){
+            if(!m_canMove){
+            m_canMove = true;
+            }
+            else m_canMove = false;
+
+            m_first = false;
+        }
+    }
 }
 
 void Realtime::keyReleaseEvent(QKeyEvent *event) {
@@ -433,13 +463,27 @@ void Realtime::timerEvent(QTimerEvent *event) {
     float deltaTime = elapsedms * 0.001f;
     m_elapsedTimer.restart();
 
-    float speed = 5;
+    float speed = 0.6f;
 
     // Use deltaTime and m_keyMap here to move around
-    SceneCameraData newcamera = camera.getUpdatedCameraData(metaData.cameraData, m_keyMap, speed, deltaTime);
+//    SceneCameraData newcamera = camera.getUpdatedCameraData(metaData.cameraData, m_keyMap, speed, deltaTime);
+    SceneCameraData newcamera = camera.cameraMovement(metaData.cameraData, speed, deltaTime, m_canMove, m_onXDir);
     viewMatrix = camera.getViewMatrix(newcamera);
     float aspectRatio = camera.getAspectRatio(size().width() * m_devicePixelRatio, size().height() * m_devicePixelRatio);
     projectionMatrix = camera.getProjectionMatrix(newcamera, aspectRatio, settings.farPlane, settings.nearPlane);
+
+    if (gameStart && isMoveLeft) {
+        // Perform action for moving left
+        glm::vec3 direction = glm::vec3(0.0f, 0.0f, -1.0f);
+        playobject = movement.getUpdatedPlayObject(playobject, direction, 10.7f, deltaTime);
+        metaData = movement.updateMetaData(metaData, playobject, playobject.ctm, playobjectindex);
+    }
+    else if (gameStart){
+        // Perform action for not moving left
+        glm::vec3 direction = glm::vec3(1.0f, 0.0f, 0.0f);
+        playobject = movement.getUpdatedPlayObject(playobject, direction, 10.7f, deltaTime);
+        metaData = movement.updateMetaData(metaData, playobject, playobject.ctm, playobjectindex);
+    }
 
     update(); // asks for a PaintGL() call to occur
 }

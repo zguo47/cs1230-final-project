@@ -1,6 +1,7 @@
 #pragma once
 
 // Defined before including GLEW to suppress deprecation messages on macOS
+#include "objectmovement/objectmovement.h"
 #ifdef __APPLE__
 #define GL_SILENCE_DEPRECATION
 #endif
@@ -44,6 +45,15 @@ private:
 
     bool initialized = false;
     bool finished_drawing = false;
+    bool isMoveLeft = true;
+    bool gameStart = false;
+    bool m_onXDir = true;
+    bool m_canMove = false;
+    bool m_first = true;
+
+    int playobjectindex = 0;
+
+    RenderShapeData playobject;
 
     GLuint m_shader; // Stores id of shader program
     GLuint m_vbo;    // Stores id of VBO
@@ -65,6 +75,7 @@ private:
 
     RenderData metaData;
     Camera camera;
+    Movement movement;
 
     Cone myCone;
     Cube myCube;

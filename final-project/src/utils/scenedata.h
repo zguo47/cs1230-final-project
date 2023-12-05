@@ -29,6 +29,14 @@ enum class TransformationType {
     TRANSFORMATION_MATRIX
 };
 
+//Enum
+enum class objectType {
+    PLAY_OBJECT,
+    UP_OBJECT,
+    DOWN_OBJECT,
+    ROTATE_OBJECT
+};
+
 // Type which can be used to store an RGBA color in floats [0,1]
 using SceneColor = glm::vec4;
 
@@ -145,6 +153,7 @@ struct SceneMaterial {
 // Struct which contains data for a single primitive in a scene
 struct ScenePrimitive {
     PrimitiveType type;
+    objectType object_type;
     SceneMaterial material;
     std::string meshfile; // Used for triangle meshes
 };

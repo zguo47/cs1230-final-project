@@ -937,6 +937,7 @@
   /Users/shania/cs1230/cs1230-final-project/final-project/glm/vec4.hpp \
   /Users/shania/cs1230/cs1230-final-project/final-project/glm/vector_relational.hpp \
   /Users/shania/cs1230/cs1230-final-project/final-project/src/camera/camera.h \
+  /Users/shania/cs1230/cs1230-final-project/final-project/src/objectmovement/objectmovement.h \
   /Users/shania/cs1230/cs1230-final-project/final-project/src/realtime.h \
   /Users/shania/cs1230/cs1230-final-project/final-project/src/shapes/Cone.h \
   /Users/shania/cs1230/cs1230-final-project/final-project/src/shapes/Cube.h \

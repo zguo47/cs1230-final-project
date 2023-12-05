@@ -3,6 +3,26 @@
 #include "settings.h"
 #include "utils/scenedata.h"
 
+SceneCameraData Camera::cameraMovement(SceneCameraData &camera, float speed, float deltaTime, bool canMove, bool onXDir){
+    if(canMove){
+        glm::vec4 translateDir = glm::normalize(glm::vec4(1.0f, 0.0f, -1.0f, 0.0f));
+        glm::vec4 translation = translateDir * speed * deltaTime;
+        camera.pos += translation;
+
+        if(!onXDir){
+            glm::vec4 translateDir = glm::vec4(glm::normalize(glm::cross(glm::vec3(camera.look), glm::vec3(camera.up))), 0.0f);
+            glm::vec4 translation = translateDir * speed * deltaTime;
+            camera.pos += translation;
+        }
+        else {
+            glm::vec4 translateDir = glm::vec4(glm::normalize(glm::cross(glm::vec3(camera.look), glm::vec3(camera.up))), 0.0f);
+            glm::vec4 translation = -translateDir * speed * deltaTime;
+            camera.pos += translation;
+        }
+    }
+    return camera;
+}
+
 SceneCameraData Camera::getUpdatedRotation(SceneCameraData &camera, int deltaX, int deltaY) const {
     float xRadians = glm::radians(deltaX * 0.1f);
     float yRadians = glm::radians(deltaY * 0.1f);

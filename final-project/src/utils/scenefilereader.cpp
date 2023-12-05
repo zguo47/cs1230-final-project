@@ -808,7 +808,7 @@ bool ScenefileReader::parsePrimitive(const QJsonObject &prim, SceneNode *node) {
     QStringList requiredFields = {"type"};
     QStringList optionalFields = {
         "meshFile", "ambient", "diffuse", "specular", "reflective", "transparent", "shininess", "ior",
-        "blend", "textureFile", "textureU", "textureV", "bumpMapFile", "bumpMapU", "bumpMapV"};
+        "blend", "textureFile", "textureU", "textureV", "bumpMapFile", "bumpMapU", "bumpMapV", "objectType"};
 
     QStringList allFields = requiredFields + optionalFields;
     for (auto field : prim.keys()) {
@@ -866,6 +866,33 @@ bool ScenefileReader::parsePrimitive(const QJsonObject &prim, SceneNode *node) {
     else {
         std::cout << "unknown primitive type \"" << primType << "\"" << std::endl;
         return false;
+    }
+
+    if (prim.contains("objectType")){
+        if (!prim["objectType"].isString()) {
+            std::cout << "primitive object type must be of type string" << std::endl;
+            return false;
+        }
+        std::string primObjectType = prim["objectType"].toString().toStdString();
+
+        if (primObjectType == "play_object"){
+            primitive->object_type = objectType::PLAY_OBJECT;
+        }
+        else if (primObjectType == "up_object"){
+            primitive->object_type = objectType::UP_OBJECT;
+        }
+        else if (primObjectType == "down_object"){
+            primitive->object_type = objectType::DOWN_OBJECT;
+        }
+        else if (primObjectType == "rotate_object"){
+            primitive->object_type = objectType::ROTATE_OBJECT;
+        }
+        else {
+            std::cout << "unknown primitive object type \"" << primObjectType << "\"" << std::endl;
+            return false;
+        }
+    }else{
+        primitive->object_type = objectType::ROTATE_OBJECT;
     }
 
     if (prim.contains("ambient")) {

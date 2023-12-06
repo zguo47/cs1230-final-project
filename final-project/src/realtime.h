@@ -108,4 +108,5 @@ private:
 
     // Device Correction Variables
     int m_devicePixelRatio;
+    bool AABB(RenderShapeData object);
 };

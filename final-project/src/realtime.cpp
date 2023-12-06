@@ -464,30 +464,64 @@ void Realtime::timerEvent(QTimerEvent *event) {
     m_elapsedTimer.restart();
 
     float speed = 0.6f;
-
+    for (RenderShapeData &object : metaData.shapes){
+        if (object.primitive.object_type != objectType::PLAY_OBJECT){
+            if(AABB(object)){
+            gameStart = false;
+            }
+        }
+    }
     // Use deltaTime and m_keyMap here to move around
 //    SceneCameraData newcamera = camera.getUpdatedCameraData(metaData.cameraData, m_keyMap, speed, deltaTime);
-    SceneCameraData newcamera = camera.cameraMovement(metaData.cameraData, speed, deltaTime, m_canMove, m_onXDir);
-    viewMatrix = camera.getViewMatrix(newcamera);
-    float aspectRatio = camera.getAspectRatio(size().width() * m_devicePixelRatio, size().height() * m_devicePixelRatio);
-    projectionMatrix = camera.getProjectionMatrix(newcamera, aspectRatio, settings.farPlane, settings.nearPlane);
+    if (gameStart){
+        SceneCameraData newcamera = camera.cameraMovement(metaData.cameraData, speed, deltaTime, m_canMove, m_onXDir);
+        viewMatrix = camera.getViewMatrix(newcamera);
+        float aspectRatio = camera.getAspectRatio(size().width() * m_devicePixelRatio, size().height() * m_devicePixelRatio);
+        projectionMatrix = camera.getProjectionMatrix(newcamera, aspectRatio, settings.farPlane, settings.nearPlane);
+    }
 
     if (gameStart && isMoveLeft) {
         // Perform action for moving left
         glm::vec3 direction = glm::vec3(0.0f, 0.0f, -1.0f);
-        playobject = movement.getUpdatedPlayObject(playobject, direction, 10.7f, deltaTime);
+        playobject = movement.getUpdatedPlayObject(playobject, direction, 12.7f, deltaTime);
         metaData = movement.updateMetaData(metaData, playobject, playobject.ctm, playobjectindex);
     }
     else if (gameStart){
         // Perform action for not moving left
         glm::vec3 direction = glm::vec3(1.0f, 0.0f, 0.0f);
-        playobject = movement.getUpdatedPlayObject(playobject, direction, 10.7f, deltaTime);
+        playobject = movement.getUpdatedPlayObject(playobject, direction, 12.7f, deltaTime);
         metaData = movement.updateMetaData(metaData, playobject, playobject.ctm, playobjectindex);
     }
-
     update(); // asks for a PaintGL() call to occur
 }
 
+bool Realtime::AABB(RenderShapeData object){
+    //get object's max points in play cube space
+    glm::vec4 maxV = playobject.invCTM*object.ctm*glm::vec4(0.5,0.5,0.5,1);
+    glm::vec4 minV = playobject.invCTM*object.ctm*glm::vec4(-0.5,-0.5,-0.5,1);
+//    std::cout<<maxV.x<<std::endl;
+//    std::cout<<minV.x<<std::endl;
+//    std::cout<<maxV.y<<std::endl;
+//    std::cout<<minV.y<<std::endl;
+//    std::cout<<maxV.z<<std::endl;
+//    std::cout<<minV.z<<std::endl;
+//    std::cout<<maxV2.x<<std::endl;
+//    std::cout<<minV2.x<<std::endl;
+//    std::cout<<maxV2.y<<std::endl;
+//    std::cout<<minV2.y<<std::endl;
+//    std::cout<<maxV2.z<<std::endl;
+//    std::cout<<minV2.z<<std::endl;
+    // Check for overlap along the X-axis
+    if (maxV.x < -0.5 || minV.x > 0.5) return false;
+
+    // Check for overlap along the Y-axis
+    if (maxV.y < -0.5 || minV.y > 0.5) return false;
+
+    // Check for overlap along the Z-axis
+    if (maxV.z < -0.5 || minV.z > 0.5) return false;
+    // If there is overlap along all axes, collision occurs
+    return true;
+}
 void Realtime::makeFBO(){
     // Task 19: Generate and bind an empty texture, set its min/mag filter interpolation, then unbind
     glGenTextures(1, &m_fbo_texture);

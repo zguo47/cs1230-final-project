@@ -37,6 +37,9 @@ add_executable(${PROJECT_NAME}
     src/shapes/Cube.cpp
     src/shapes/Sphere.cpp
 
+    src/AABB.h
+    src/AABB.cpp
+
     src/objectmovement/objectmovement.h
     src/objectmovement/objectmovement.cpp
 

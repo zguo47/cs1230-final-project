@@ -35,6 +35,7 @@ void helper(SceneNode* node, glm::mat4 ctm, RenderData &renderData){
         RenderShapeData object;
         object.primitive = primitive;
         object.ctm = ctm;
+        object.invCTM = inverse(ctm);
         renderData.shapes.push_back(object);
 
     }

@@ -3,6 +3,7 @@
 #include <glm/glm.hpp>
 #include "QtCore/qnamespace.h"
 #include "utils/scenedata.h"
+#include "unordered_map"
 
 // A class representing a virtual camera.
 

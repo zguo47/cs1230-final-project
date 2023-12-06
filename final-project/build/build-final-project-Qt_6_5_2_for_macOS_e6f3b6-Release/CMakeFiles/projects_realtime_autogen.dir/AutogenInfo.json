@@ -397,6 +397,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/Users/shania/cs1230/cs1230-final-project/final-project/src/AABB.h",
+			"MU",
+			"UVLADIE3JM/moc_AABB.cpp",
+			null
+		],
+		[
 			"/Users/shania/cs1230/cs1230-final-project/final-project/src/camera/camera.h",
 			"MU",
 			"I2NATBFSMB/moc_camera.cpp",
@@ -562,6 +568,11 @@
 	"SETTINGS_FILE" : "/Users/shania/cs1230/cs1230-final-project/final-project/build/build-final-project-Qt_6_5_2_for_macOS_e6f3b6-Release/CMakeFiles/projects_realtime_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/Users/shania/cs1230/cs1230-final-project/final-project/src/AABB.cpp",
+			"MU",
+			null
+		],
 		[
 			"/Users/shania/cs1230/cs1230-final-project/final-project/src/camera/camera.cpp",
 			"MU",

@@ -1167,6 +1167,8 @@ projects_realtime_autogen/timestamp: \
   /Users/shania/cs1230/cs1230-final-project/final-project/glm/vec3.hpp \
   /Users/shania/cs1230/cs1230-final-project/final-project/glm/vec4.hpp \
   /Users/shania/cs1230/cs1230-final-project/final-project/glm/vector_relational.hpp \
+  /Users/shania/cs1230/cs1230-final-project/final-project/src/AABB.cpp \
+  /Users/shania/cs1230/cs1230-final-project/final-project/src/AABB.h \
   /Users/shania/cs1230/cs1230-final-project/final-project/src/camera/camera.cpp \
   /Users/shania/cs1230/cs1230-final-project/final-project/src/camera/camera.h \
   /Users/shania/cs1230/cs1230-final-project/final-project/src/main.cpp \

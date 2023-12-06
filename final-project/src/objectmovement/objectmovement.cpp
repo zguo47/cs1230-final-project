@@ -10,6 +10,7 @@ RenderShapeData Movement::getUpdatedPlayObject(RenderShapeData &shapeData, glm::
     modelMatrix = glm::translate(modelMatrix, displacement);
 
     shapeData.ctm = modelMatrix;
+    shapeData.invCTM = inverse(modelMatrix);
     return shapeData;
 }
 
@@ -26,6 +27,8 @@ RenderData Movement::updateMetaData(RenderData metaData, RenderShapeData playobj
         // Handle invalid index, e.g., log an error
         std::cout<<"invalid index";
     }
+    //test
+
 
     metaData.shapes.push_back(playobject);
 

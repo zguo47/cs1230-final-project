@@ -388,6 +388,9 @@ void Realtime::sceneChanged() {
     viewMatrix = camera.getViewMatrix(metaData.cameraData);
     float aspectRatio = camera.getAspectRatio(size().width() * m_devicePixelRatio, size().height() * m_devicePixelRatio);
     projectionMatrix = camera.getProjectionMatrix(metaData.cameraData, aspectRatio, settings.farPlane, settings.nearPlane);
+    isMoveLeft = true;
+    m_onXDir = true;
+    fall_down = false;
     update(); // asks for a PaintGL() call to occur
 }
 
@@ -402,7 +405,7 @@ void Realtime::settingsChanged() {
 
 void Realtime::keyPressEvent(QKeyEvent *event) {
     m_keyMap[Qt::Key(event->key())] = true;
-    if (event->key() == Qt::Key_M) {
+    if (event->key() == Qt::Key_Space) {
         // Toggle the isMoveLeft state
         gameStart = true;
         isMoveLeft = !isMoveLeft;
@@ -420,6 +423,33 @@ void Realtime::keyPressEvent(QKeyEvent *event) {
 
             m_first = false;
         }
+
+    }
+
+    if (event->key() == Qt::Key_R) {
+        RenderData temp;
+        metaData = temp;
+        bool success = SceneParser::parse(settings.sceneFilePath, metaData);
+        if(!success){
+            std::cout << "What do you think you're loading?" << std::endl;
+            exit(1);
+        }
+
+        int idx = 0;
+        for (const RenderShapeData& shapeData : metaData.shapes) {
+            if (shapeData.primitive.object_type == objectType::PLAY_OBJECT){
+            playobject = shapeData;
+            playobjectindex = idx;
+            }
+            idx += 1;
+        }
+        viewMatrix = camera.getViewMatrix(metaData.cameraData);
+        float aspectRatio = camera.getAspectRatio(size().width() * m_devicePixelRatio, size().height() * m_devicePixelRatio);
+        projectionMatrix = camera.getProjectionMatrix(metaData.cameraData, aspectRatio, settings.farPlane, settings.nearPlane);
+        isMoveLeft = true;
+        m_onXDir = true;
+        fall_down = false;
+        update(); // asks for a PaintGL() call to occur
     }
 }
 
@@ -462,19 +492,53 @@ void Realtime::timerEvent(QTimerEvent *event) {
     int elapsedms   = m_elapsedTimer.elapsed();
     float deltaTime = elapsedms * 0.001f;
     m_elapsedTimer.restart();
-
+    int z = 0;
     float speed = 0.6f;
+    int collideBridgeNum = 0;
+
+    bool intersectBridge = false;
     for (RenderShapeData &object : metaData.shapes){
         if (object.primitive.object_type != objectType::PLAY_OBJECT){
             if(AABB(object)){
-            gameStart = false;
+                if(object.primitive.collision_type == collisionType::collision){
+                    gameStart = false;
+                }
+                //if collide with bridge
+                if (object.primitive.collision_type == collisionType::bridge){
+                    fall_down = true;//make it possible to falldown
+                }
+            }
+            //if fall_down is true and not colliding with bridge
+            if(object.primitive.collision_type == collisionType::bridge){
+                if(AABB(object)){
+                    collideBridgeNum+=1;
+                }
             }
         }
+//        else{
+//            for (int i = 0; i < 4; ++i) {
+//            for (int j = 0; j < 4; ++j) {
+//                std::cout << object.ctm[i][j] << "\t";
+//            }
+//            std::cout << std::endl;
+//            }
+//        }
+    }
+    if (collideBridgeNum == 0 and fall_down){
+        glm::vec3 direction;
+        if (isMoveLeft){
+            direction = glm::normalize(glm::vec3(0.0f, 0.0f, -1.0f));
+        }else{
+            direction = glm::normalize(glm::vec3(1.0f, 0.0f, 0.0f));
+        }
+        playobject = movement.getUpdatedPlayObject(playobject, direction, 12.7f, deltaTime, true);
+        metaData = movement.updateMetaData(metaData, playobject, playobject.ctm, playobjectindex, true);
+        gameStart = false;
     }
     // Use deltaTime and m_keyMap here to move around
 //    SceneCameraData newcamera = camera.getUpdatedCameraData(metaData.cameraData, m_keyMap, speed, deltaTime);
     if (gameStart){
-        SceneCameraData newcamera = camera.cameraMovement(metaData.cameraData, speed, deltaTime, m_canMove, m_onXDir);
+        SceneCameraData newcamera = camera.cameraMovement(metaData.cameraData, speed, deltaTime, m_canMove, m_onXDir, m_keyMap);
         viewMatrix = camera.getViewMatrix(newcamera);
         float aspectRatio = camera.getAspectRatio(size().width() * m_devicePixelRatio, size().height() * m_devicePixelRatio);
         projectionMatrix = camera.getProjectionMatrix(newcamera, aspectRatio, settings.farPlane, settings.nearPlane);
@@ -483,14 +547,14 @@ void Realtime::timerEvent(QTimerEvent *event) {
     if (gameStart && isMoveLeft) {
         // Perform action for moving left
         glm::vec3 direction = glm::vec3(0.0f, 0.0f, -1.0f);
-        playobject = movement.getUpdatedPlayObject(playobject, direction, 12.7f, deltaTime);
-        metaData = movement.updateMetaData(metaData, playobject, playobject.ctm, playobjectindex);
+        playobject = movement.getUpdatedPlayObject(playobject, direction, 12.7f, deltaTime, false);
+        metaData = movement.updateMetaData(metaData, playobject, playobject.ctm, playobjectindex, false);
     }
     else if (gameStart){
         // Perform action for not moving left
         glm::vec3 direction = glm::vec3(1.0f, 0.0f, 0.0f);
-        playobject = movement.getUpdatedPlayObject(playobject, direction, 12.7f, deltaTime);
-        metaData = movement.updateMetaData(metaData, playobject, playobject.ctm, playobjectindex);
+        playobject = movement.getUpdatedPlayObject(playobject, direction, 12.7f, deltaTime, false);
+        metaData = movement.updateMetaData(metaData, playobject, playobject.ctm, playobjectindex, false);
     }
     update(); // asks for a PaintGL() call to occur
 }
@@ -499,18 +563,6 @@ bool Realtime::AABB(RenderShapeData object){
     //get object's max points in play cube space
     glm::vec4 maxV = playobject.invCTM*object.ctm*glm::vec4(0.5,0.5,0.5,1);
     glm::vec4 minV = playobject.invCTM*object.ctm*glm::vec4(-0.5,-0.5,-0.5,1);
-//    std::cout<<maxV.x<<std::endl;
-//    std::cout<<minV.x<<std::endl;
-//    std::cout<<maxV.y<<std::endl;
-//    std::cout<<minV.y<<std::endl;
-//    std::cout<<maxV.z<<std::endl;
-//    std::cout<<minV.z<<std::endl;
-//    std::cout<<maxV2.x<<std::endl;
-//    std::cout<<minV2.x<<std::endl;
-//    std::cout<<maxV2.y<<std::endl;
-//    std::cout<<minV2.y<<std::endl;
-//    std::cout<<maxV2.z<<std::endl;
-//    std::cout<<minV2.z<<std::endl;
     // Check for overlap along the X-axis
     if (maxV.x < -0.5 || minV.x > 0.5) return false;
 
@@ -522,6 +574,8 @@ bool Realtime::AABB(RenderShapeData object){
     // If there is overlap along all axes, collision occurs
     return true;
 }
+
+
 void Realtime::makeFBO(){
     // Task 19: Generate and bind an empty texture, set its min/mag filter interpolation, then unbind
     glGenTextures(1, &m_fbo_texture);

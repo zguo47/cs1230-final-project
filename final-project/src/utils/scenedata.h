@@ -37,6 +37,12 @@ enum class objectType {
     ROTATE_OBJECT
 };
 
+enum class collisionType{
+    bridge,
+    no_collision,
+    collision
+};
+
 // Type which can be used to store an RGBA color in floats [0,1]
 using SceneColor = glm::vec4;
 
@@ -153,7 +159,8 @@ struct SceneMaterial {
 // Struct which contains data for a single primitive in a scene
 struct ScenePrimitive {
     PrimitiveType type;
-    objectType object_type;
+    objectType object_type;//for movement of object
+    collisionType collision_type;
     SceneMaterial material;
     std::string meshfile; // Used for triangle meshes
 };

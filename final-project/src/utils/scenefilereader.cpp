@@ -808,7 +808,7 @@ bool ScenefileReader::parsePrimitive(const QJsonObject &prim, SceneNode *node) {
     QStringList requiredFields = {"type"};
     QStringList optionalFields = {
         "meshFile", "ambient", "diffuse", "specular", "reflective", "transparent", "shininess", "ior",
-        "blend", "textureFile", "textureU", "textureV", "bumpMapFile", "bumpMapU", "bumpMapV", "objectType"};
+        "blend", "textureFile", "textureU", "textureV", "bumpMapFile", "bumpMapU", "bumpMapV", "objectType","collisionType"};
 
     QStringList allFields = requiredFields + optionalFields;
     for (auto field : prim.keys()) {
@@ -866,6 +866,25 @@ bool ScenefileReader::parsePrimitive(const QJsonObject &prim, SceneNode *node) {
     else {
         std::cout << "unknown primitive type \"" << primType << "\"" << std::endl;
         return false;
+    }
+
+    if (prim.contains("collisionType")){
+        if (!prim["collisionType"].isString()) {
+            std::cout << "primitive collision type must be of type string" << std::endl;
+            return false;
+        }
+        std::string primCollisionType = prim["collisionType"].toString().toStdString();
+        if (primCollisionType == "Yes"){
+            primitive->collision_type = collisionType::collision;
+        }
+        else if(primCollisionType == "No"){
+            primitive->collision_type = collisionType::no_collision;
+        }
+        else if(primCollisionType == "Bridge"){
+            primitive->collision_type = collisionType::bridge;
+        }
+    }else{
+        primitive->collision_type = collisionType::collision;
     }
 
     if (prim.contains("objectType")){

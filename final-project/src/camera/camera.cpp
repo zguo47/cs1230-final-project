@@ -3,7 +3,33 @@
 #include "settings.h"
 #include "utils/scenedata.h"
 
-SceneCameraData Camera::cameraMovement(SceneCameraData &camera, float speed, float deltaTime, bool canMove, bool onXDir){
+SceneCameraData Camera::cameraMovement(SceneCameraData &camera, float speed, float deltaTime, bool canMove, bool onXDir, std::unordered_map<Qt::Key, bool> m_keyMap){
+
+    if (m_keyMap[Qt::Key_W]){
+        //        glm::vec4 translation = glm::normalize(camera.look) * speed * deltaTime;
+        //        camera.pos += translation;
+        glm::vec4 translateDir = glm::normalize(glm::vec4(1.0f, 0.0f, -1.0f, 0.0f));
+        glm::vec4 translation = translateDir * speed * deltaTime;
+        camera.pos += translation;
+    }
+    if (m_keyMap[Qt::Key_D]){
+        glm::vec4 translateDir = glm::vec4(glm::normalize(glm::cross(glm::vec3(camera.look), glm::vec3(camera.up))), 0.0f);
+        glm::vec4 translation = translateDir * speed * deltaTime;
+        camera.pos += translation;
+    }
+    if (m_keyMap[Qt::Key_S]){
+        //        glm::vec4 translation = glm::normalize(-camera.look) * speed * deltaTime;
+        //        camera.pos += translation;
+        glm::vec4 translateDir = glm::normalize(glm::vec4(1.0f, 0.0f, -1.0f, 0.0f));
+        glm::vec4 translation = -translateDir * speed * deltaTime;
+        camera.pos += translation;
+    }
+    if (m_keyMap[Qt::Key_A]){
+        glm::vec4 translateDir = glm::vec4(glm::normalize(glm::cross(glm::vec3(camera.look), glm::vec3(camera.up))), 0.0f);
+        glm::vec4 translation = -translateDir * speed * deltaTime;
+        camera.pos += translation;
+    }
+
     if(canMove){
         glm::vec4 translateDir = glm::normalize(glm::vec4(1.0f, 0.0f, -1.0f, 0.0f));
         glm::vec4 translation = translateDir * speed * deltaTime;

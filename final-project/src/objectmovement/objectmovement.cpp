@@ -2,10 +2,27 @@
 #include "glm/gtx/transform.hpp"
 #include <iostream>
 
-RenderShapeData Movement::getUpdatedPlayObject(RenderShapeData &shapeData, glm::vec3 direction, float speed, float deltaTime){
-    glm::mat4 modelMatrix = shapeData.ctm;
+RenderShapeData Movement::getUpdatedPlayObject(RenderShapeData &shapeData, glm::vec3 direction, float speed, float deltaTime, bool isFalling){
 
-    glm::vec3 displacement = direction * speed * deltaTime;
+    glm::mat4 modelMatrix = shapeData.ctm;
+    glm::vec3 displacement;
+    if (isFalling){
+        timer += deltaTime;
+        const float gravity = 2.0f;
+
+        // Horizontal displacement remains the same
+        glm::vec3 horizontalDisplacement = direction * speed * deltaTime;
+
+        // Vertical displacement follows a parabolic trajectory
+        // Assuming initial vertical velocity is 0 when falling starts
+        float verticalDisplacement = 0.5f * gravity * pow(timer, 2.0f);
+
+        // Combine horizontal and vertical displacement
+        displacement = horizontalDisplacement + glm::vec3(0.0f, verticalDisplacement, 0.0f);
+
+    }else{
+        displacement = direction * speed * deltaTime;
+    }
 
     modelMatrix = glm::translate(modelMatrix, displacement);
 
@@ -14,12 +31,8 @@ RenderShapeData Movement::getUpdatedPlayObject(RenderShapeData &shapeData, glm::
     return shapeData;
 }
 
-RenderData Movement::updateMetaData(RenderData metaData, RenderShapeData playobject, const glm::mat4& newCTM, int objectIndex){
-//    for (RenderShapeData& shape : metaData.shapes) {
-//        if (shape.primitive.object_type == objectType::PLAY_OBJECT){
-//            shape.ctm = shapeData.ctm;
-//        }
-//    }
+RenderData Movement::updateMetaData(RenderData metaData, RenderShapeData playobject, const glm::mat4& newCTM, int objectIndex, bool isFalling){
+
     if (objectIndex >= 0 && objectIndex < metaData.shapes.size()) {
         // Update the ctm of the specific object
         metaData.shapes[objectIndex].ctm = newCTM;
@@ -29,8 +42,9 @@ RenderData Movement::updateMetaData(RenderData metaData, RenderShapeData playobj
     }
     //test
 
-
-    metaData.shapes.push_back(playobject);
+    if (!isFalling){
+        metaData.shapes.push_back(playobject);
+    }
 
     return metaData;
 }

@@ -42,7 +42,7 @@ protected:
     void resizeGL(int width, int height) override;      // Called when window size changes
 
 private:
-
+    bool fall_down = false; //fall out of the bridge
     bool initialized = false;
     bool finished_drawing = false;
     bool isMoveLeft = true;

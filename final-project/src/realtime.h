@@ -24,6 +24,7 @@ class Realtime : public QOpenGLWidget
 {
 public:
     Realtime(QWidget *parent = nullptr);
+    void bindGameOverBuffer();
     void bindBuffer();
     void clearLights();
     void finish();                                      // Called on program exit
@@ -31,7 +32,7 @@ public:
     void settingsChanged();
     void saveViewportImage(std::string filePath);
     void makeFBO();
-    void paintTexture(GLuint texture, bool filter_or_not, bool blur_or_not, bool gray_or_not);
+    void paintTexture(GLuint texture, bool filter_or_not, bool blur_or_not, bool gray_or_not, bool gamestart);
 
 public slots:
     void tick(QTimerEvent* event);                      // Called once per tick of m_timer
@@ -100,6 +101,8 @@ private:
     // Tick Related Variables
     int m_timer;                                        // Stores timer which attempts to run ~60 times per second
     QElapsedTimer m_elapsedTimer;                       // Stores timer which keeps track of actual time between frames
+
+    float fall_timer = 0.0f;
 
     // Input Related Variables
     bool m_mouseDown = false;                           // Stores state of left mouse button

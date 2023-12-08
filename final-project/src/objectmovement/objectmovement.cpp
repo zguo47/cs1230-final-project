@@ -2,12 +2,11 @@
 #include "glm/gtx/transform.hpp"
 #include <iostream>
 
-RenderShapeData Movement::getUpdatedPlayObject(RenderShapeData &shapeData, glm::vec3 direction, float speed, float deltaTime, bool isFalling){
+RenderShapeData Movement::getUpdatedPlayObject(RenderShapeData &shapeData, glm::vec3 direction, float speed, float deltaTime, float fallTime, bool isFalling){
 
     glm::mat4 modelMatrix = shapeData.ctm;
     glm::vec3 displacement;
     if (isFalling){
-        timer += deltaTime;
         const float gravity = 2.0f;
 
         // Horizontal displacement remains the same
@@ -15,7 +14,7 @@ RenderShapeData Movement::getUpdatedPlayObject(RenderShapeData &shapeData, glm::
 
         // Vertical displacement follows a parabolic trajectory
         // Assuming initial vertical velocity is 0 when falling starts
-        float verticalDisplacement = 0.5f * gravity * pow(timer, 2.0f);
+        float verticalDisplacement = -0.5f * gravity * pow(fallTime, 2.0f);
 
         // Combine horizontal and vertical displacement
         displacement = horizontalDisplacement + glm::vec3(0.0f, verticalDisplacement, 0.0f);

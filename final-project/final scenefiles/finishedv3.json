@@ -9917,7 +9917,7 @@
                                 1
                             ],
                             "shininess": 1,
-                            "collisionType": "Bridge",
+                            "collisionType": "No",
                             "type": "cube"
                         }
                     ],
@@ -29343,9 +29343,9 @@
                                 }
                             ],
                             "translate": [
-                                228.51,
+                                232,
                                 -5.2,
-                                -219
+                                -220
                             ],
                             "rotate": [
                                 0,
@@ -29354,9 +29354,9 @@
                                 0
                             ],
                             "scale": [
-                                6,
+                                13,
                                 9.5,
-                                6
+                                10
                             ]
                         },
                         {
@@ -29446,15 +29446,15 @@
                 {
                     "name": "Part3-small road 2",
                     "translate": [
-                        331.25,
+                        70.75,
                         0,
-                        -307
+                        -70.75
                     ],
                     "rotate": [
                         0,
                         1,
                         0,
-                        180
+                        0
                     ],
                     "scale": [
                         0.78,
@@ -29465,9 +29465,9 @@
                         {
                             "name": "small road 16-18",
                             "translate": [
-                                9.5,
+                                -4.75,
                                 0,
-                                -8.5
+                                4.25
                             ],
                             "rotate": [
                                 0,
@@ -29542,6 +29542,7 @@
                                                 1
                                             ],
                                             "shininess": 1,
+                                            "collisionType": "Bridge",
                                             "type": "cube"
                                         }
                                     ],
@@ -29582,6 +29583,7 @@
                                                 1
                                             ],
                                             "shininess": 1,
+                                            "collisionType": "Bridge",
                                             "type": "cube"
                                         }
                                     ],
@@ -29725,6 +29727,7 @@
                                                 1
                                             ],
                                             "shininess": 1,
+                                            "collisionType": "Bridge",
                                             "type": "cube"
                                         }
                                     ],

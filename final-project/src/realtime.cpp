@@ -58,6 +58,25 @@ void Realtime::finish() {
         m_shader = 0; // Set to 0 to mark it as 'deleted'
     }
 
+    if (m_texture_shader) {
+        glDeleteProgram(m_texture_shader);
+        m_texture_shader = 0; // Set to 0 to mark it as 'deleted'
+    }
+
+    if (m_fullscreen_vbo) {
+        glDeleteBuffers(1, &m_fullscreen_vbo);
+        m_fullscreen_vbo = 0; // Set to 0 to mark it as 'deleted'
+    }
+
+    if (m_fullscreen_vao) {
+        glDeleteVertexArrays(1, &m_fullscreen_vao);
+        m_fullscreen_vao = 0; // Set to 0 to mark it as 'deleted'
+    }
+
+    glDeleteTextures(1, &m_fbo_texture); // project6
+    glDeleteRenderbuffers(1, &m_fbo_renderbuffer); // project6
+    glDeleteFramebuffers(1, &m_fbo); // project6
+
     this->doneCurrent();
 }
 
@@ -102,6 +121,7 @@ void Realtime::initializeGL() {
     bindBuffer();
 
 }
+
 
 void Realtime::bindBuffer(){
     // ================== Vertex Buffer Objects
@@ -346,7 +366,7 @@ void Realtime::paintGL() {
 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    paintTexture(m_fbo_texture, settings.perPixelFilter, settings.kernelBasedFilter, settings.extraCredit1);
+    paintTexture(m_fbo_texture, settings.perPixelFilter, settings.kernelBasedFilter, settings.extraCredit1, settings.extraCredit2);
 
     glBindVertexArray(0);
 
@@ -408,6 +428,7 @@ void Realtime::keyPressEvent(QKeyEvent *event) {
     if (event->key() == Qt::Key_Space) {
         // Toggle the isMoveLeft state
         gameStart = true;
+        fall_timer = 0.0f;
         isMoveLeft = !isMoveLeft;
 
         if(!m_onXDir){
@@ -515,14 +536,6 @@ void Realtime::timerEvent(QTimerEvent *event) {
                 }
             }
         }
-//        else{
-//            for (int i = 0; i < 4; ++i) {
-//            for (int j = 0; j < 4; ++j) {
-//                std::cout << object.ctm[i][j] << "\t";
-//            }
-//            std::cout << std::endl;
-//            }
-//        }
     }
     if (collideBridgeNum == 0 and fall_down){
         glm::vec3 direction;
@@ -531,7 +544,8 @@ void Realtime::timerEvent(QTimerEvent *event) {
         }else{
             direction = glm::normalize(glm::vec3(1.0f, 0.0f, 0.0f));
         }
-        playobject = movement.getUpdatedPlayObject(playobject, direction, 12.7f, deltaTime, true);
+        fall_timer += deltaTime;
+        playobject = movement.getUpdatedPlayObject(playobject, direction, 12.7f, deltaTime, fall_timer, true);
         metaData = movement.updateMetaData(metaData, playobject, playobject.ctm, playobjectindex, true);
         gameStart = false;
     }
@@ -547,15 +561,16 @@ void Realtime::timerEvent(QTimerEvent *event) {
     if (gameStart && isMoveLeft) {
         // Perform action for moving left
         glm::vec3 direction = glm::vec3(0.0f, 0.0f, -1.0f);
-        playobject = movement.getUpdatedPlayObject(playobject, direction, 12.7f, deltaTime, false);
+        playobject = movement.getUpdatedPlayObject(playobject, direction, 12.7f, deltaTime, 0.0f, false);
         metaData = movement.updateMetaData(metaData, playobject, playobject.ctm, playobjectindex, false);
     }
     else if (gameStart){
         // Perform action for not moving left
         glm::vec3 direction = glm::vec3(1.0f, 0.0f, 0.0f);
-        playobject = movement.getUpdatedPlayObject(playobject, direction, 12.7f, deltaTime, false);
+        playobject = movement.getUpdatedPlayObject(playobject, direction, 12.7f, deltaTime, 0.0f, false);
         metaData = movement.updateMetaData(metaData, playobject, playobject.ctm, playobjectindex, false);
     }
+
     update(); // asks for a PaintGL() call to occur
 }
 
@@ -607,7 +622,7 @@ void Realtime::makeFBO(){
 }
 
 // Task 31: Update the paintTexture function signature
-void Realtime::paintTexture(GLuint texture, bool filter_or_not, bool blur_or_not, bool gray_or_not){
+void Realtime::paintTexture(GLuint texture, bool filter_or_not, bool blur_or_not, bool gray_or_not, bool gameover){
     glUseProgram(m_texture_shader);
     // Task 32: Set your bool uniform on whether or not to filter the texture drawn
     GLint b_location = glGetUniformLocation(m_texture_shader, "filter_or_not");
@@ -618,6 +633,9 @@ void Realtime::paintTexture(GLuint texture, bool filter_or_not, bool blur_or_not
 
     GLint b_location3 = glGetUniformLocation(m_texture_shader, "gray_or_not");
     glUniform1i(b_location3, gray_or_not);
+
+    GLint b_location4 = glGetUniformLocation(m_texture_shader, "gameover");
+    glUniform1i(b_location4, gameover);
 
     GLint t_location1 = glGetUniformLocation(m_texture_shader, "texelWidth");
     glUniform1f(t_location1, 1.0f / m_fbo_width);

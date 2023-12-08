@@ -23,6 +23,6 @@ class Movement {
 public:
     float timer = 0;
 
-    RenderShapeData getUpdatedPlayObject(RenderShapeData &shapeData, glm::vec3 direction, float speed, float deltaTime, bool isFalling);
+    RenderShapeData getUpdatedPlayObject(RenderShapeData &shapeData, glm::vec3 direction, float speed, float deltaTime, float fallTime, bool isFalling);
     RenderData updateMetaData(RenderData metaData, RenderShapeData playobject, const glm::mat4& newCTM, int objectIndex, bool isFalling);
 };

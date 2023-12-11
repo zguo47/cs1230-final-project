@@ -4,9 +4,15 @@
 //         received post-interpolation from the vertex shader
 in vec3 w_position;
 in vec3 w_normal;
+in vec3 o_pos;
 
 // Task 10: declare an out vec4 for your output color
 out vec4 fragColor;
+
+uniform sampler2D samp;
+uniform bool scenetexture_or_not;
+uniform bool is_water;
+uniform vec2 textureOffset;
 
 // Task 12: declare relevant uniform(s) here, for ambient lighting
 uniform vec4 ambient;
@@ -103,6 +109,28 @@ void main() {
             fragColor += curr_light.lightColor * att * specular * pow(r_dot, (m_shininess + 0.00001));
         }
 
+    }
+
+    if (scenetexture_or_not){
+        vec2 uv;
+        if (abs(o_pos.x) > abs(o_pos.y) && abs(o_pos.x) > abs(o_pos.z)) {
+            // Side faces
+            uv = o_pos.yz;
+        } else if (abs(o_pos.y) > abs(o_pos.x) && abs(o_pos.y) > abs(o_pos.z)) {
+            // Top and bottom faces
+            uv = o_pos.xz;
+        } else {
+            // Front and back faces
+            uv = o_pos.xy;
+        }
+
+        if (is_water){
+            uv = uv + 0.5 + textureOffset; // Map from [-0.5, 0.5] to [0, 1]
+        }else{
+            uv = uv + 0.5; // Map from [-0.5, 0.5] to [0, 1]
+        }
+
+        fragColor = texture(samp, uv);
     }
 
 

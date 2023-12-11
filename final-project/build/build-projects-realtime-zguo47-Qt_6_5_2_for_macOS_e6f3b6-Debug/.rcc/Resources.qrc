@@ -1,7 +1,0 @@
-<RCC>
-  <qresource prefix="/">
-    <file alias="resources/shaders/default.frag">/Users/shania/cs1230/projects-realtime-zguo47/resources/shaders/default.frag</file>
-    <file alias="resources/shaders/default.vert">/Users/shania/cs1230/projects-realtime-zguo47/resources/shaders/default.vert</file>
-  </qresource>
-</RCC>
-

@@ -12,6 +12,7 @@ layout (location = 1) in vec3 o_normal;
 
 out vec3 w_normal;
 out vec3 w_position;
+out vec3 o_pos;
 
 // Task 6: declare a uniform mat4 to store model matrix
 uniform mat4 model_matrix;
@@ -22,6 +23,8 @@ uniform mat4 projection_matrix;
 uniform mat3 normalMatrix;
 
 void main() {
+
+    o_pos = o_position;
 
     w_position = vec3(model_matrix * vec4(o_position, 1.0));
 

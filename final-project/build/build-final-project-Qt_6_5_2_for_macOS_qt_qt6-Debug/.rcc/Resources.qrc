@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="resources/shaders/default.frag">/Users/shania/cs1230/cs1230-final-project/final-project/resources/shaders/default.frag</file>
+    <file alias="resources/shaders/default.vert">/Users/shania/cs1230/cs1230-final-project/final-project/resources/shaders/default.vert</file>
+    <file alias="resources/shaders/texture.frag">/Users/shania/cs1230/cs1230-final-project/final-project/resources/shaders/texture.frag</file>
+    <file alias="resources/shaders/texture.vert">/Users/shania/cs1230/cs1230-final-project/final-project/resources/shaders/texture.vert</file>
+    <file alias="resources/images/kitten.png">/Users/shania/cs1230/cs1230-final-project/final-project/resources/images/kitten.png</file>
+    <file alias="resources/images/gameovertrans.png">/Users/shania/cs1230/cs1230-final-project/final-project/resources/images/gameovertrans.png</file>
+  </qresource>
+</RCC>
+

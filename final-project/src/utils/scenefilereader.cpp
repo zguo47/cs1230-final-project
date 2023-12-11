@@ -808,7 +808,7 @@ bool ScenefileReader::parsePrimitive(const QJsonObject &prim, SceneNode *node) {
     QStringList requiredFields = {"type"};
     QStringList optionalFields = {
         "meshFile", "ambient", "diffuse", "specular", "reflective", "transparent", "shininess", "ior",
-        "blend", "textureFile", "textureU", "textureV", "bumpMapFile", "bumpMapU", "bumpMapV", "objectType","collisionType"};
+        "blend", "textureFile", "textureU", "textureV", "bumpMapFile", "bumpMapU", "bumpMapV", "objectType","collisionType","group", "textureType"};
 
     QStringList allFields = requiredFields + optionalFields;
     for (auto field : prim.keys()) {
@@ -885,6 +885,23 @@ bool ScenefileReader::parsePrimitive(const QJsonObject &prim, SceneNode *node) {
         }
     }else{
         primitive->collision_type = collisionType::collision;
+    }
+
+    if (prim.contains("group")){
+        int primGroup = prim["group"].toInt();
+        primitive->group = primGroup;
+    }
+
+    if (prim.contains("textureType")){
+        std::string primTextureType = prim["textureType"].toString().toStdString();
+        if (primTextureType == "bridge"){
+            primitive->textureType = textureType::BRIDGE;
+        }
+        else if(primTextureType == "water"){
+            primitive->textureType = textureType::WATER;
+        }
+    }else{
+        primitive->textureType = textureType::NONE;
     }
 
     if (prim.contains("objectType")){

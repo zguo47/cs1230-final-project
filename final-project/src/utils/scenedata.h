@@ -43,6 +43,12 @@ enum class collisionType{
     collision
 };
 
+enum class textureType{
+    WATER,
+    BRIDGE,
+    NONE
+};
+
 // Type which can be used to store an RGBA color in floats [0,1]
 using SceneColor = glm::vec4;
 
@@ -163,6 +169,8 @@ struct ScenePrimitive {
     collisionType collision_type;
     SceneMaterial material;
     std::string meshfile; // Used for triangle meshes
+    textureType textureType;
+    int group;
 };
 
 // Struct which contains data for a transformation.

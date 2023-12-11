@@ -87,6 +87,14 @@ qt6_add_resources(${PROJECT_NAME} "Resources"
         resources/shaders/texture.frag
         resources/shaders/texture.vert
         resources/images/kitten.png
+        resources/images/gameover.png
+        resources/images/water.jpeg
+        resources/images/water2.png
+        resources/images/water3.png
+        resources/images/water4.png
+        resources/images/daniel.png
+
+        final_scenefiles/finishedv4.json
 )
 
 target_sources(projects_realtime_other_files

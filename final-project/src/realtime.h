@@ -24,7 +24,7 @@ class Realtime : public QOpenGLWidget
 {
 public:
     Realtime(QWidget *parent = nullptr);
-    void bindGameOverBuffer();
+    void loadTexture();
     void bindBuffer();
     void clearLights();
     void finish();                                      // Called on program exit
@@ -51,6 +51,10 @@ private:
     bool m_onXDir = true;
     bool m_canMove = false;
     bool m_first = true;
+    bool is_water = false;
+    bool is_bridge = false;
+
+    std::string configFilePath = ":/final_scenefiles/finishedv4.json";
 
     int playobjectindex = 0;
 
@@ -74,6 +78,11 @@ private:
     GLuint m_fbo_texture;
     GLuint m_fbo_renderbuffer;
 
+    GLuint m_textures[2];
+    GLuint m_scene_texture;
+    GLuint m_scene_texture2;
+    GLuint m_scene_texture3;
+
     RenderData metaData;
     Camera camera;
     Movement movement;
@@ -90,6 +99,8 @@ private:
 
     glm::mat4 viewMatrix;
     glm::mat4 projectionMatrix;
+
+    glm::vec2 textureOffset = glm::vec2(0.0f, 0.0f);
 
     void keyPressEvent(QKeyEvent *event) override;
     void keyReleaseEvent(QKeyEvent *event) override;
@@ -112,4 +123,7 @@ private:
     // Device Correction Variables
     int m_devicePixelRatio;
     bool AABB(RenderShapeData object);
+    int currentGroup = 1;
+    glm::vec4 playPos;
+    bool groupMove = false;
 };

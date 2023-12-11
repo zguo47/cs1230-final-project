@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="resources/shaders/default.frag">/Users/shania/cs1230/cs1230-final-project/final-project/resources/shaders/default.frag</file>
+    <file alias="resources/shaders/default.vert">/Users/shania/cs1230/cs1230-final-project/final-project/resources/shaders/default.vert</file>
+    <file alias="resources/shaders/texture.frag">/Users/shania/cs1230/cs1230-final-project/final-project/resources/shaders/texture.frag</file>
+    <file alias="resources/shaders/texture.vert">/Users/shania/cs1230/cs1230-final-project/final-project/resources/shaders/texture.vert</file>
+    <file alias="resources/images/kitten.png">/Users/shania/cs1230/cs1230-final-project/final-project/resources/images/kitten.png</file>
+    <file alias="resources/images/gameover.png">/Users/shania/cs1230/cs1230-final-project/final-project/resources/images/gameover.png</file>
+    <file alias="resources/images/water.jpeg">/Users/shania/cs1230/cs1230-final-project/final-project/resources/images/water.jpeg</file>
+    <file alias="resources/images/water2.png">/Users/shania/cs1230/cs1230-final-project/final-project/resources/images/water2.png</file>
+    <file alias="resources/images/water3.png">/Users/shania/cs1230/cs1230-final-project/final-project/resources/images/water3.png</file>
+    <file alias="resources/images/water4.png">/Users/shania/cs1230/cs1230-final-project/final-project/resources/images/water4.png</file>
+    <file alias="resources/images/daniel.png">/Users/shania/cs1230/cs1230-final-project/final-project/resources/images/daniel.png</file>
+    <file alias="final_scenefiles/finishedv4.json">/Users/shania/cs1230/cs1230-final-project/final-project/final_scenefiles/finishedv4.json</file>
+  </qresource>
+</RCC>
+

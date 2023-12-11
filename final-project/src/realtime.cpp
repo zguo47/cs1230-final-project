@@ -114,11 +114,65 @@ void Realtime::initializeGL() {
     m_shader = ShaderLoader::createShaderProgram(":/resources/shaders/default.vert", ":/resources/shaders/default.frag");
     m_texture_shader = ShaderLoader::createShaderProgram(":/resources/shaders/texture.vert", ":/resources/shaders/texture.frag");
 
+    loadTexture();
+
     initialized = true;
     glGenBuffers(1, &m_vbo);
     glGenVertexArrays(1, &m_vao);
 
     bindBuffer();
+    sceneChanged();
+
+}
+
+void Realtime::loadTexture(){
+    glGenTextures(2, m_textures);
+
+    m_scene_texture = m_textures[0];
+    glBindTexture(GL_TEXTURE_2D, m_scene_texture);
+
+    // Set the texture wrapping parameters
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    // Set texture filtering parameters
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    // Load image, create texture and generate mipmaps
+
+    // Prepare filepath
+    QString water_filepath = QString(":/resources/images/water4.png");
+
+    // Task 1: Obtain image from filepath
+    m_image = QImage(water_filepath);
+
+    // Task 2: Format image to fit OpenGL
+    m_image = m_image.convertToFormat(QImage::Format_RGBA8888).mirrored();
+
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_image.width(), m_image.height(), 0, GL_RGBA, GL_UNSIGNED_BYTE, m_image.bits());
+    glBindTexture(GL_TEXTURE_2D, 0);
+
+    m_scene_texture2 = m_textures[1];
+    glBindTexture(GL_TEXTURE_2D, m_scene_texture2);
+
+    // Set the texture wrapping parameters
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    // Set texture filtering parameters
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    // Load image, create texture and generate mipmaps
+
+    // Prepare filepath
+    QString bridge_filepath = QString(":/resources/images/daniel.png");
+
+    // Task 1: Obtain image from filepath
+    m_image = QImage(bridge_filepath);
+
+    // Task 2: Format image to fit OpenGL
+    m_image = m_image.convertToFormat(QImage::Format_RGBA8888).mirrored();
+
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_image.width(), m_image.height(), 0, GL_RGBA, GL_UNSIGNED_BYTE, m_image.bits());
+    glBindTexture(GL_TEXTURE_2D, 0);
 
 }
 
@@ -129,10 +183,10 @@ void Realtime::bindBuffer(){
     // Bind the VBO you created here
     glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
 
-    myCone.updateParams(settings.shapeParameter1, settings.shapeParameter2);
-    myCube.updateParams(settings.shapeParameter1);
-    mySphere.updateParams(settings.shapeParameter1, settings.shapeParameter2);
-    myCylinder.updateParams(settings.shapeParameter1, settings.shapeParameter2);
+    myCone.updateParams(5, 5);
+    myCube.updateParams(5);
+    mySphere.updateParams(5, 5);
+    myCylinder.updateParams(5, 5);
 
     conepoints = myCone.generateShape();
     spherepoints = mySphere.generateShape();
@@ -174,6 +228,11 @@ void Realtime::bindBuffer(){
     glUseProgram(m_texture_shader);
     GLint location = glGetUniformLocation(m_texture_shader, "samp");
     glUniform1i(location, 0);
+    glUseProgram(0);
+
+    glUseProgram(m_shader);
+    GLint location_default = glGetUniformLocation(m_shader, "samp");
+    glUniform1i(location_default, 0);
     glUseProgram(0);
 
     // Task 11: Fix this "fullscreen" quad's vertex data
@@ -354,8 +413,39 @@ void Realtime::paintGL() {
                 break;
         }
 
-        // Draw the shape
+        GLint b_location4 = glGetUniformLocation(m_shader, "scenetexture_or_not");
+
+        GLint water_location = glGetUniformLocation(m_shader, "is_water");
+
+        if (shapeData.primitive.type == PrimitiveType::PRIMITIVE_CUBE &&  shapeData.primitive.textureType == textureType::WATER){
+            is_water = true;
+            glBindTexture(GL_TEXTURE_2D, m_scene_texture);
+            glActiveTexture(GL_TEXTURE0);
+            glUniform1i(b_location4, is_water);
+        }else if (shapeData.primitive.type == PrimitiveType::PRIMITIVE_CUBE && shapeData.primitive.textureType == textureType::BRIDGE){
+            is_bridge = true;
+            glBindTexture(GL_TEXTURE_2D, m_scene_texture2);
+            glActiveTexture(GL_TEXTURE0);
+            glUniform1i(b_location4, is_bridge);
+        }else{
+            glUniform1i(b_location4, false);
+        }
+
+        glUniform1i(water_location, is_water);
+
+        GLint offset_location = glGetUniformLocation(m_shader, "textureOffset");
+        glUniform2fv(offset_location, 1, &textureOffset[0]);
+
         glDrawArrays(GL_TRIANGLES, offset, count);
+
+        if (shapeData.primitive.type == PrimitiveType::PRIMITIVE_CUBE && shapeData.primitive.textureType == textureType::WATER){
+            glBindTexture(GL_TEXTURE_2D, 0);
+        }else if (shapeData.primitive.type == PrimitiveType::PRIMITIVE_CUBE &&  shapeData.primitive.textureType == textureType::BRIDGE){
+            glBindTexture(GL_TEXTURE_2D, 0);
+        }
+
+        is_water = false;
+        is_bridge = false;
 
     }
 
@@ -366,7 +456,7 @@ void Realtime::paintGL() {
 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    paintTexture(m_fbo_texture, settings.perPixelFilter, settings.kernelBasedFilter, settings.extraCredit1, settings.extraCredit2);
+    paintTexture(m_fbo_texture, false, false, false, false);
 
     glBindVertexArray(0);
 
@@ -396,7 +486,7 @@ void Realtime::resizeGL(int w, int h) {
 void Realtime::sceneChanged() {
     RenderData temp;
     metaData = temp;
-    bool success = SceneParser::parse(settings.sceneFilePath, metaData);
+    bool success = SceneParser::parse(configFilePath, metaData);
     int idx = 0;
     for (const RenderShapeData& shapeData : metaData.shapes) {
         if (shapeData.primitive.object_type == objectType::PLAY_OBJECT){
@@ -407,10 +497,11 @@ void Realtime::sceneChanged() {
     }
     viewMatrix = camera.getViewMatrix(metaData.cameraData);
     float aspectRatio = camera.getAspectRatio(size().width() * m_devicePixelRatio, size().height() * m_devicePixelRatio);
-    projectionMatrix = camera.getProjectionMatrix(metaData.cameraData, aspectRatio, settings.farPlane, settings.nearPlane);
+    projectionMatrix = camera.getProjectionMatrix(metaData.cameraData, aspectRatio, 100.0f, 0.1f);
     isMoveLeft = true;
     m_onXDir = true;
     fall_down = false;
+    currentGroup = 1;
     update(); // asks for a PaintGL() call to occur
 }
 
@@ -445,12 +536,18 @@ void Realtime::keyPressEvent(QKeyEvent *event) {
             m_first = false;
         }
 
+        for (RenderShapeData &object : metaData.shapes){
+            float distXZ = sqrt(pow(object.originPos.x-playPos.x,2)+pow(object.originPos.z-playPos.z,2));//get x,z distance between play and scene
+            if ((object.primitive.group == currentGroup && distXZ<0.8) ||( object.primitive.group == currentGroup && groupMove)){
+                groupMove = true;
+            }
+        }
     }
 
     if (event->key() == Qt::Key_R) {
         RenderData temp;
         metaData = temp;
-        bool success = SceneParser::parse(settings.sceneFilePath, metaData);
+        bool success = SceneParser::parse(configFilePath, metaData);
         if(!success){
             std::cout << "What do you think you're loading?" << std::endl;
             exit(1);
@@ -466,10 +563,11 @@ void Realtime::keyPressEvent(QKeyEvent *event) {
         }
         viewMatrix = camera.getViewMatrix(metaData.cameraData);
         float aspectRatio = camera.getAspectRatio(size().width() * m_devicePixelRatio, size().height() * m_devicePixelRatio);
-        projectionMatrix = camera.getProjectionMatrix(metaData.cameraData, aspectRatio, settings.farPlane, settings.nearPlane);
+        projectionMatrix = camera.getProjectionMatrix(metaData.cameraData, aspectRatio, 100.0f, 0.1f);
         isMoveLeft = true;
         m_onXDir = true;
         fall_down = false;
+        currentGroup = 1;
         update(); // asks for a PaintGL() call to occur
     }
 }
@@ -503,7 +601,7 @@ void Realtime::mouseMoveEvent(QMouseEvent *event) {
         SceneCameraData newcamera = camera.getUpdatedRotation(metaData.cameraData, deltaX, deltaY);
         viewMatrix = camera.getViewMatrix(newcamera);
         float aspectRatio = camera.getAspectRatio(size().width() * m_devicePixelRatio, size().height() * m_devicePixelRatio);
-        projectionMatrix = camera.getProjectionMatrix(newcamera, aspectRatio, settings.farPlane, settings.nearPlane);
+        projectionMatrix = camera.getProjectionMatrix(newcamera, aspectRatio, 100.0f, 0.1f);
 
         update(); // asks for a PaintGL() call to occur
     }
@@ -518,22 +616,36 @@ void Realtime::timerEvent(QTimerEvent *event) {
     int collideBridgeNum = 0;
 
     bool intersectBridge = false;
-    for (RenderShapeData &object : metaData.shapes){
-        if (object.primitive.object_type != objectType::PLAY_OBJECT){
-            if(AABB(object)){
-                if(object.primitive.collision_type == collisionType::collision){
-                    gameStart = false;
+    playPos = playobject.ctm*glm::vec4(0.f,0.f,0.f,1);
+    if (gameStart){
+        for (RenderShapeData &object : metaData.shapes){
+            // collision
+            if (object.primitive.object_type != objectType::PLAY_OBJECT){
+                if(AABB(object)){
+                    if(object.primitive.collision_type == collisionType::collision){
+                        gameStart = false;
+                    }
+                    //if collide with bridge
+                    if (object.primitive.collision_type == collisionType::bridge){
+                        fall_down = true;//make it possible to falldown
+                    }
                 }
-                //if collide with bridge
-                if (object.primitive.collision_type == collisionType::bridge){
-                    fall_down = true;//make it possible to falldown
+                //if fall_down is true and not colliding with bridge
+                if(object.primitive.collision_type == collisionType::bridge){
+                    if(AABB(object)){
+                        collideBridgeNum+=1;
+                    }
                 }
             }
-            //if fall_down is true and not colliding with bridge
-            if(object.primitive.collision_type == collisionType::bridge){
-                if(AABB(object)){
-                    collideBridgeNum+=1;
-                }
+            //movement of the scene
+            if (object.primitive.object_type==objectType::UP_OBJECT and object.primitive.group == currentGroup && groupMove){
+                glm::vec3 direction = glm::normalize(glm::vec3(0.f,1.f,0.f));
+                object = movement.getUpdatedPlayObject(object,direction,5.f,deltaTime,0.0f,false);
+                object.moveTime+=0.1;
+            }
+            if (object.moveTime >= 2.0f and groupMove and object.primitive.group == currentGroup){
+                groupMove = false;
+                currentGroup+=1;
             }
         }
     }
@@ -552,22 +664,25 @@ void Realtime::timerEvent(QTimerEvent *event) {
     // Use deltaTime and m_keyMap here to move around
 //    SceneCameraData newcamera = camera.getUpdatedCameraData(metaData.cameraData, m_keyMap, speed, deltaTime);
     if (gameStart){
+        textureOffset += glm::vec2(-0.2f * deltaTime, 0.0f);
+    }
+    if (gameStart){
         SceneCameraData newcamera = camera.cameraMovement(metaData.cameraData, speed, deltaTime, m_canMove, m_onXDir, m_keyMap);
         viewMatrix = camera.getViewMatrix(newcamera);
         float aspectRatio = camera.getAspectRatio(size().width() * m_devicePixelRatio, size().height() * m_devicePixelRatio);
-        projectionMatrix = camera.getProjectionMatrix(newcamera, aspectRatio, settings.farPlane, settings.nearPlane);
+        projectionMatrix = camera.getProjectionMatrix(newcamera, aspectRatio, 100.0f, 0.1f);
     }
 
     if (gameStart && isMoveLeft) {
         // Perform action for moving left
         glm::vec3 direction = glm::vec3(0.0f, 0.0f, -1.0f);
-        playobject = movement.getUpdatedPlayObject(playobject, direction, 12.7f, deltaTime, 0.0f, false);
+        playobject = movement.getUpdatedPlayObject(playobject, direction, 12.3f, deltaTime, 0.0f, false);
         metaData = movement.updateMetaData(metaData, playobject, playobject.ctm, playobjectindex, false);
     }
     else if (gameStart){
         // Perform action for not moving left
         glm::vec3 direction = glm::vec3(1.0f, 0.0f, 0.0f);
-        playobject = movement.getUpdatedPlayObject(playobject, direction, 12.7f, deltaTime, 0.0f, false);
+        playobject = movement.getUpdatedPlayObject(playobject, direction, 12.3f, deltaTime, 0.0f, false);
         metaData = movement.updateMetaData(metaData, playobject, playobject.ctm, playobjectindex, false);
     }
 
@@ -622,7 +737,7 @@ void Realtime::makeFBO(){
 }
 
 // Task 31: Update the paintTexture function signature
-void Realtime::paintTexture(GLuint texture, bool filter_or_not, bool blur_or_not, bool gray_or_not, bool gameover){
+void Realtime::paintTexture(GLuint texture, bool filter_or_not, bool blur_or_not, bool gray_or_not, bool scenetexture_or_not){
     glUseProgram(m_texture_shader);
     // Task 32: Set your bool uniform on whether or not to filter the texture drawn
     GLint b_location = glGetUniformLocation(m_texture_shader, "filter_or_not");
@@ -634,8 +749,8 @@ void Realtime::paintTexture(GLuint texture, bool filter_or_not, bool blur_or_not
     GLint b_location3 = glGetUniformLocation(m_texture_shader, "gray_or_not");
     glUniform1i(b_location3, gray_or_not);
 
-    GLint b_location4 = glGetUniformLocation(m_texture_shader, "gameover");
-    glUniform1i(b_location4, gameover);
+    GLint b_location4 = glGetUniformLocation(m_texture_shader, "scenetexture_or_not");
+    glUniform1i(b_location4, scenetexture_or_not);
 
     GLint t_location1 = glGetUniformLocation(m_texture_shader, "texelWidth");
     glUniform1f(t_location1, 1.0f / m_fbo_width);
@@ -644,11 +759,13 @@ void Realtime::paintTexture(GLuint texture, bool filter_or_not, bool blur_or_not
     glUniform1f(t_location2, 1.0f / m_fbo_height);
 
     glBindVertexArray(m_fullscreen_vao);
+
     // Task 10: Bind "texture" to slot 0
     glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, texture);
 
+    glBindTexture(GL_TEXTURE_2D, texture);
     glDrawArrays(GL_TRIANGLES, 0, 6);
+
     glBindTexture(GL_TEXTURE_2D, 0);
     glBindVertexArray(0);
     glUseProgram(0);

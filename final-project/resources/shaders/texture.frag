@@ -6,6 +6,7 @@ in vec2 uv;
 // Task 8: Add a sampler2D uniform
 uniform sampler2D samp;
 
+
 uniform float texelWidth;
 uniform float texelHeight;
 
@@ -13,7 +14,7 @@ uniform float texelHeight;
 uniform bool filter_or_not;
 uniform bool blur_or_not;
 uniform bool gray_or_not;
-uniform bool gameover;
+uniform bool scenetexture_or_not;
 
 out vec4 fragColor;
 
@@ -21,10 +22,6 @@ void main()
 {
     fragColor = vec4(1);
     // Task 17: Set fragColor using the sampler2D at the UV coordinate
-
-    if (gameover){
-        fragColor = texture(samp, uv);
-    }
 
     vec2 texelSize = vec2(texelWidth, texelHeight);
     vec4 sum = vec4(0.0);

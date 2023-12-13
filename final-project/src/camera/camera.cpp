@@ -1,9 +1,10 @@
+#include <iostream>
 #include <stdexcept>
 #include "camera.h"
 #include "settings.h"
 #include "utils/scenedata.h"
 
-SceneCameraData Camera::cameraMovement(SceneCameraData &camera, float speed, float deltaTime, bool canMove, bool onXDir, std::unordered_map<Qt::Key, bool> m_keyMap){
+SceneCameraData Camera::cameraMovement(SceneCameraData &camera, float speed, float up_speed, float m_speed, glm::vec4 xspeed, float deltaTime, bool canMove, bool onXDir, std::unordered_map<Qt::Key, bool> m_keyMap, bool canRotate, bool moveUp, int deltaX, int deltaY){
 
     if (m_keyMap[Qt::Key_W]){
         //        glm::vec4 translation = glm::normalize(camera.look) * speed * deltaTime;
@@ -35,23 +36,39 @@ SceneCameraData Camera::cameraMovement(SceneCameraData &camera, float speed, flo
         glm::vec4 translation = translateDir * speed * deltaTime;
         camera.pos += translation;
 
-        if(!onXDir){
+        if(!onXDir && !canRotate){
             glm::vec4 translateDir = glm::vec4(glm::normalize(glm::cross(glm::vec3(camera.look), glm::vec3(camera.up))), 0.0f);
             glm::vec4 translation = translateDir * speed * deltaTime;
             camera.pos += translation;
         }
-        else {
+        else if (!canRotate){
             glm::vec4 translateDir = glm::vec4(glm::normalize(glm::cross(glm::vec3(camera.look), glm::vec3(camera.up))), 0.0f);
             glm::vec4 translation = -translateDir * speed * deltaTime;
             camera.pos += translation;
         }
+        else{
+            camera.pos += m_speed * glm::normalize(xspeed);
+        }
+    }
+
+    if (canRotate && moveUp){
+    camera = getUpdatedRotation(camera, deltaX, deltaY, 0.05f);
+    camera.pos += glm::vec4(0.0f, up_speed, 0.0f, 1.0f);
+    }else if (canRotate){
+    camera = getUpdatedRotation(camera, deltaX, deltaY, 0.03f);
+    camera.pos += glm::vec4(0.0f, -up_speed, 0.0f, 1.0f);
     }
     return camera;
 }
 
-SceneCameraData Camera::getUpdatedRotation(SceneCameraData &camera, int deltaX, int deltaY) const {
-    float xRadians = glm::radians(deltaX * 0.1f);
-    float yRadians = glm::radians(deltaY * 0.1f);
+
+SceneCameraData Camera::getUpdatedRotation(SceneCameraData &camera, int deltaX, int deltaY, float sensitivity) const {
+//    std::cout << deltaX;
+//    std::cout << " ";
+//    std::cout << deltaY;
+//    std::cout << " ";
+    float xRadians = glm::radians(deltaX * sensitivity);
+    float yRadians = glm::radians(deltaY * sensitivity);
 
     glm::vec3 right = glm::normalize(glm::cross(glm::vec3(camera.look), glm::vec3(camera.up)));
 

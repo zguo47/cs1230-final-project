@@ -95,6 +95,10 @@ qt6_add_resources(${PROJECT_NAME} "Resources"
         resources/images/daniel.png
 
         final_scenefiles/finishedv4.json
+        final_scenefiles/finishedv5.json
+        final_scenefiles/finishedv6.json
+        final_scenefiles/finishedv7.json
+        final_scenefiles/directional_light_1.json
 )
 
 target_sources(projects_realtime_other_files

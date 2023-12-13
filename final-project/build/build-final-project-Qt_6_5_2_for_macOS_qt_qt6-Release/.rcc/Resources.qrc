@@ -12,6 +12,10 @@
     <file alias="resources/images/water4.png">/Users/shania/cs1230/cs1230-final-project/final-project/resources/images/water4.png</file>
     <file alias="resources/images/daniel.png">/Users/shania/cs1230/cs1230-final-project/final-project/resources/images/daniel.png</file>
     <file alias="final_scenefiles/finishedv4.json">/Users/shania/cs1230/cs1230-final-project/final-project/final_scenefiles/finishedv4.json</file>
+    <file alias="final_scenefiles/finishedv5.json">/Users/shania/cs1230/cs1230-final-project/final-project/final_scenefiles/finishedv5.json</file>
+    <file alias="final_scenefiles/finishedv6.json">/Users/shania/cs1230/cs1230-final-project/final-project/final_scenefiles/finishedv6.json</file>
+    <file alias="final_scenefiles/finishedv7.json">/Users/shania/cs1230/cs1230-final-project/final-project/final_scenefiles/finishedv7.json</file>
+    <file alias="final_scenefiles/directional_light_1.json">/Users/shania/cs1230/cs1230-final-project/final-project/final_scenefiles/directional_light_1.json</file>
   </qresource>
 </RCC>
 

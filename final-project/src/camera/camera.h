@@ -15,9 +15,11 @@ class Camera {
 public:
     // Returns the view matrix for the current camera settings.
     // You might also want to define another function that return the inverse of the view matrix.
-    SceneCameraData cameraMovement(SceneCameraData &camera, float speed, float deltaTime, bool canMove, bool onXDir, std::unordered_map<Qt::Key, bool> m_keyMap);
+    SceneCameraData cameraMovement(SceneCameraData &camera, float speed, float up_speed, float mspeed, glm::vec4 xspeed, float deltaTime, bool canMove, bool onXDir, std::unordered_map<Qt::Key, bool> m_keyMap, bool canRotate, bool moveUp, int deltaX, int deltaY);
 
-    SceneCameraData getUpdatedRotation(SceneCameraData &camera, int deltaX, int deltaY) const;
+    SceneCameraData cameraRotationMovement(SceneCameraData &camera, float speed, float deltaTime, bool canMove, int deltaX, int deltaY);
+
+    SceneCameraData getUpdatedRotation(SceneCameraData &camera, int deltaX, int deltaY, float sensitivity) const;
 
     SceneCameraData getUpdatedCameraData(SceneCameraData &camera, std::unordered_map<Qt::Key, bool> m_keyMap, float speed, float deltaTime) const;
 

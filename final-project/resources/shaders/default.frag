@@ -14,6 +14,9 @@ uniform bool scenetexture_or_not;
 uniform bool is_water;
 uniform vec2 textureOffset;
 
+uniform sampler2D shadowMap;
+uniform mat4 lightSpaceMatrix;
+
 // Task 12: declare relevant uniform(s) here, for ambient lighting
 uniform vec4 ambient;
 
@@ -40,8 +43,8 @@ struct Light {
 
 uniform Light lights[8];
 
+
 void main() {
-    // Remember that you need to renormalize vectors here if you want them to be normalized
 
     fragColor = vec4(0.0, 0.0, 0.0, 1.0);
     fragColor = fragColor + ambient;
@@ -111,6 +114,7 @@ void main() {
 
     }
 
+
     if (scenetexture_or_not){
         vec2 uv;
         if (abs(o_pos.x) > abs(o_pos.y) && abs(o_pos.x) > abs(o_pos.z)) {
@@ -132,6 +136,7 @@ void main() {
 
         fragColor = texture(samp, uv);
     }
+
 
 
 

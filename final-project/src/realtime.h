@@ -32,6 +32,7 @@ public:
     void settingsChanged();
     void saveViewportImage(std::string filePath);
     void makeFBO();
+    void makeshadowFBO();
     void paintTexture(GLuint texture, bool filter_or_not, bool blur_or_not, bool gray_or_not, bool gamestart);
 
 public slots:
@@ -54,7 +55,7 @@ private:
     bool is_water = false;
     bool is_bridge = false;
 
-    std::string configFilePath = ":/final_scenefiles/finishedv4.json";
+    std::string configFilePath = ":/final_scenefiles/finishedv7.json";
 
     int playobjectindex = 0;
 

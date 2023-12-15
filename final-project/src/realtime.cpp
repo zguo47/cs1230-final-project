@@ -1518,10 +1518,8 @@ void Realtime::timerEvent(QTimerEvent *event) {
 
                 // Handle bridge collision type
             case collisionType::bridge:
-                if(fall_down) {
-                    collideBridge = true;
-                }
-                else fall_down = true;
+                collideBridge = true;
+                fall_down = true;
 
                 break;
 
@@ -1561,7 +1559,7 @@ void Realtime::timerEvent(QTimerEvent *event) {
 
         if (object.primitive.group == 100 && distXZ < 1.2 && object.moveTime<1.5){
             direction = glm::normalize(glm::vec3(0.f, 1.f, 0.f));
-            object = movement.getUpdatedPlayObject(object, direction, 39.6f, deltaTime, 0.0f, false);
+            object = movement.getUpdatedPlayObject(object, direction, 38.2f, deltaTime, 0.0f, false);
             object.moveTime+=0.1;
         }
 
@@ -1569,20 +1567,33 @@ void Realtime::timerEvent(QTimerEvent *event) {
             float distXYZ = glm::distance(object.originPos,playPos);
             if (distXYZ < 1.7f){
                 direction = glm::normalize(glm::vec3(0.f, -1.f, 0.f));
-                object = movement.getUpdatedPlayObject(object, direction, 4.8f, deltaTime, 0.0f, false);
+                object = movement.getUpdatedPlayObject(object, direction, 4.65f, deltaTime, 0.0f, false);
                 object.moveTime+=0.1;
             }
         }
 
-        if (object.primitive.group == 102 && distXZ < 1.2 && object.moveTime < 4.7f){
+        if (object.primitive.group == 102 && distXZ < 2.0f && object.moveTime < 4.7f){
             direction = glm::vec3(0.f, 1.f, 0.f);
-            object = movement.getUpdatedPlayObject(object, direction, 1.f, deltaTime, 0.0f, false);
+            object = movement.getUpdatedPlayObject(object, direction, 0.93f, deltaTime, 0.0f, false);
             object.moveTime+=0.1;
         }
+//        if (object.primitive.group == 102 && distXZ < 2.0f){
+//            glm::vec4 currentPos = object.ctm * glm::vec4(0.f,0.f,0.f,1);
+//            if (currentPos.y-object.originPos.y < 1.4f){
+//                direction = glm::vec3(0.f, 1.f, 0.f);
+//                object = movement.getUpdatedPlayObject(object, direction, 1.f, deltaTime, 0.0f, false);
+//            }
+//        }
+
+        if(object.primitive.group == 103 && distXZ < 0.8f && object.moveTime < 2.1f){
+            direction = glm::vec3(0.f, 1.f, 0.f);
+            object = movement.getUpdatedPlayObject(object, direction, 2.03f, deltaTime, 0.f, false);
+            object.moveTime += 0.1f;
+        }
     }
-    if (collideBridge){
-        gameStart = true; //poor fix for part 2 bug
-    }
+//    if (collideBridge && fall_down){
+//        gameStart = true; //poor fix for part 2 bug
+//    }
 
     glm::vec3 direction = (isMoveLeft) ? glm::vec3(0.0f, 0.0f, -1.0f) : glm::vec3(1.0f, 0.0f, 0.0f);
 
@@ -1603,43 +1614,43 @@ void Realtime::timerEvent(QTimerEvent *event) {
 
         SceneCameraData newcamera;
         if (playobject.moveTime > 34.0f && playobject.moveTime < 35.0f){
-            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.015f, 0.015f, glm::vec4(0.0f, 0.0f, -1.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, true, 4, 3);
+            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.015f, 0.018f, glm::vec4(0.0f, 0.0f, -1.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, true, 3, 3);
         }
         else if (playobject.moveTime >= 35.0f && playobject.moveTime < 36.0f){
-            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.02f, 0.02f, glm::vec4(0.0f, 0.0f, -1.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, true, 7, 3);
+            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.02f, 0.02f, glm::vec4(0.0f, 0.0f, -1.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, true, 6, 3);
         }
         else if (playobject.moveTime >= 36.0f && playobject.moveTime < 37.0f){
-            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.02f, 0.018f, glm::vec4(0.0f, 0.0f, -1.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, true, 8, 2);
+            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.02f, 0.02f, glm::vec4(0.0f, 0.0f, -1.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, true, 7, 2);
         }
         else if (playobject.moveTime >= 37.0f && playobject.moveTime < 38.0f){
-            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.012f, 0.01f, glm::vec4(0.0f, 0.0f, -1.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, true, 10, 1);
+            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.012f, 0.01f, glm::vec4(0.0f, 0.0f, -1.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, true, 7, 1);
         }
         else if (playobject.moveTime >= 38.0f && playobject.moveTime < 40.0f){
-            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.005f, 0.015f, glm::vec4(1.0f, 0.0f, 0.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, true, 11, 1);
+            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.005f, 0.012f, glm::vec4(1.0f, 0.0f, 0.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, true, 7, 1);
         }
         else if (playobject.moveTime >= 40.0f && playobject.moveTime < 41.0f){
-            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.005f, 0.012f, glm::vec4(1.0f, 0.0f, 1.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, true, 10, 1);
+            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.005f, 0.012f, glm::vec4(1.0f, 0.0f, 1.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, true, 7, 1);
         }
-        else if (playobject.moveTime >= 41.0f && playobject.moveTime < 43.5f){
-            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.012f, 0.01f, glm::vec4(1.0f, 0.0f, 1.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, false, 9, 1);
+        else if (playobject.moveTime >= 41.0f && playobject.moveTime < 43.0f){
+            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.008f, 0.012f, glm::vec4(1.0f, 0.0f, 1.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, false, 7, 0);
         }
-        else if (playobject.moveTime >= 43.5f && playobject.moveTime < 45.0f){
-            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.012f, 0.005f, glm::vec4(-1.0f, 0.0f, 0.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, false, 8, 0);
+        else if (playobject.moveTime >= 43.0f && playobject.moveTime < 45.0f){
+            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.008f, 0.002f, glm::vec4(-1.0f, 0.0f, 1.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, false, 7, 0);
         }
         else if (playobject.moveTime >= 45.0f && playobject.moveTime < 46.0f){
-            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.01f, 0.005f, glm::vec4(-1.0f, 0.0f, 0.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, false, 8, 0);
+            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.008f, 0.005f, glm::vec4(-1.0f, 0.0f, 0.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, false, 7, 0);
         }
         else if (playobject.moveTime >= 46.0f && playobject.moveTime < 47.0f){
-            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.005f, 0.005f, glm::vec4(-1.0f, 0.0f,  0.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, false, 8, 0);
+            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.005f, 0.005f, glm::vec4(-1.0f, 0.0f,  0.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, false, 6, 0);
         }
-        else if (playobject.moveTime >= 47.0f && playobject.moveTime < 48.5f){
-            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.0f, 0.005f, glm::vec4(-1.0f, 0.0f, -1.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, false, 8, 0);
+        else if (playobject.moveTime >= 47.0f && playobject.moveTime < 52.0f){
+            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.0f, 0.005f, glm::vec4(-1.0f, 0.0f, 0.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, false, 5, 0);
         }
-        else if (playobject.moveTime >= 48.5f && playobject.moveTime < 51.0f){
-            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.0f, 0.005f, glm::vec4(-1.0f, 0.0f, -1.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, false, 8, 0);
+        else if (playobject.moveTime >= 52.0f && playobject.moveTime < 53.0f){
+            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.0f, 0.005f, glm::vec4(-1.0f, 0.0f, 1.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, false, 4, -1);
         }
-        else if (playobject.moveTime >= 51.0f && playobject.moveTime < 56.0f){
-            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.0f, 0.01f, glm::vec4(-1.0f, 0.0f, 1.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, false, 0, -4);
+        else if (playobject.moveTime >= 53.0f && playobject.moveTime < 56.0f){
+            newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.0f, 0.005f, glm::vec4(-1.0f, 0.0f, 1.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, true, false, 0, -2);
         }
         else{
             newcamera = camera.cameraMovement(metaData.cameraData, speed, 0.0f, 0.0f, glm::vec4(0.0f, 0.0f, 1.0f, 0.0f), deltaTime, m_canMove, m_onXDir, m_keyMap, false, false, 0, 0);

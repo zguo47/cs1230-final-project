@@ -55,7 +55,7 @@ SceneCameraData Camera::cameraMovement(SceneCameraData &camera, float speed, flo
     camera = getUpdatedRotation(camera, deltaX, deltaY, 0.05f);
     camera.pos += glm::vec4(0.0f, up_speed, 0.0f, 1.0f);
     }else if (canRotate){
-    camera = getUpdatedRotation(camera, deltaX, deltaY, 0.03f);
+    camera = getUpdatedRotation(camera, deltaX, deltaY, 0.05f);
     camera.pos += glm::vec4(0.0f, -up_speed, 0.0f, 1.0f);
     }
     return camera;

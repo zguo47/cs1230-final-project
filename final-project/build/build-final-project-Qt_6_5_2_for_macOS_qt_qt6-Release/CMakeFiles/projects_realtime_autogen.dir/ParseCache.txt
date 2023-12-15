@@ -785,8 +785,8 @@
  mdp:/Users/shania/Qt/6.5.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qwidget.h
 /Users/shania/cs1230/cs1230-final-project/final-project/src/main.cpp
 /Users/shania/cs1230/cs1230-final-project/final-project/src/shapes/Cone.h
-/Users/shania/cs1230/cs1230-final-project/final-project/src/realtime.cpp
 /Users/shania/cs1230/cs1230-final-project/final-project/src/shapes/Cylinder.cpp
+/Users/shania/cs1230/cs1230-final-project/final-project/src/realtime.cpp
 /Users/shania/cs1230/cs1230-final-project/final-project/src/mainwindow.h
  mmc:Q_OBJECT
  mdp:/Users/shania/cs1230/cs1230-final-project/final-project/src/mainwindow.h
@@ -1739,9 +1739,9 @@
  mdp:/Users/shania/cs1230/cs1230-final-project/final-project/src/utils/sceneparser.h
 /Users/shania/cs1230/cs1230-final-project/final-project/src/utils/sceneparser.cpp
 /Users/shania/cs1230/cs1230-final-project/final-project/src/shapes/Cube.h
-/Users/shania/cs1230/cs1230-final-project/final-project/src/mainwindow.cpp
-/Users/shania/cs1230/cs1230-final-project/final-project/src/AABB.h
-/Users/shania/cs1230/cs1230-final-project/final-project/src/settings.cpp
 /Users/shania/cs1230/cs1230-final-project/final-project/src/utils/sceneparser.h
-/Users/shania/cs1230/cs1230-final-project/final-project/src/objectmovement/objectmovement.h
+/Users/shania/cs1230/cs1230-final-project/final-project/src/settings.cpp
+/Users/shania/cs1230/cs1230-final-project/final-project/src/AABB.h
 /Users/shania/cs1230/cs1230-final-project/final-project/src/settings.h
+/Users/shania/cs1230/cs1230-final-project/final-project/src/objectmovement/objectmovement.h
+/Users/shania/cs1230/cs1230-final-project/final-project/src/mainwindow.cpp

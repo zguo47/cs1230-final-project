@@ -1,5 +1,11 @@
 # cs1230-final-project
 
+**Link to our Demo Video**
+
+
+For more information, check out:
+https://youtu.be/8bXg5E6V5C8
+
 **Project Overview**
 For our project, we wrote a game using openGL, inspired by the music game Dancing Line. The player needs to control a cube to avoid obstacles and travel to the final destination. We constructed our game scene with the Scenes Viewer created by our TAs. The entire scene is made up of only cubes, and is divided into four different themes. We feature fields, river, valleys, mountains and trees to depict a lively autumn harvest scene. 
 
@@ -16,8 +22,3 @@ Beware of falling or colliding with obstacles! Simply press 'R' to restart the g
 
 <img width="961" alt="Screenshot 2024-04-09 at 2 52 13 AM" src="https://github.com/zguo47/cs1230-final-project/assets/98437903/c2ed321f-c2a8-4c12-b927-dca6153c989e">
 
-**Link to our Demo Video**
-
-
-For more information, check out:
-https://youtu.be/8bXg5E6V5C8
